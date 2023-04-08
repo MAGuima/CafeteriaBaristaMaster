@@ -1,1 +1,1 @@
-teste2 acesso ao GitHub
+teste2 acesso ao GitHub pelo Git Bash
