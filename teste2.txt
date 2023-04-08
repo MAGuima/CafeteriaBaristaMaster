@@ -1,1 +1,2 @@
 teste2 acesso ao GitHub pelo Git Bash
+atualizado no github.com
