@@ -1,0 +1,14 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’τοωÿÿÿÿ8ήιβαχ0
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ρ²Λ†ϋÿÿÿÿ8ίιβαχ0
+e
+java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(τξ›Ξ8ύιβαχ0
+q
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ΊÒ•θωÿÿÿÿ8ύιβαχ0
+S
+java:S6437"6Revoke and change this password, as it is compromised.(τξ›Ξ8ƒκβαχ0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ΉτΧνύÿÿÿÿ8…κβαχ0
+L
+java:S2695"/This "PreparedStatement" only has 1 parameters.(υψφ8φ‹ζαχ0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(¥ª®“8κβαχ0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(«¶‚ΐ8‰κβαχ0
