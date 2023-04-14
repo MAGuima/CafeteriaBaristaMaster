@@ -1,0 +1,76 @@
+body {
+    color: black;
+    background-color: grey;
+    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+}
+
+.telaPrincipal {
+    border: solid; border-width: 3px; border-color: red;
+    background-image: url(../imagens/Background_Principal.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+a {
+    font-size: 16px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+}
+
+button{
+    background-color: rgba(237, 237, 237, 1);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+}
+
+button:hover{
+background-color: rgba(28, 116, 98, 1);
+box-shadow: inset 2px 2px 2px white;
+}
+
+a:hover{
+color: white;
+}
+
+.containerBotoesIndex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin: 30px;
+}
+
+.telaLoja {
+    border: solid; border-width: 3px; border-color: blue;
+    background-color: rgba(237, 237, 237, 1);
+    width: 100vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.telaEventos {
+    border: solid; border-width: 3px; border-color: green;
+    background-color: rgba(237, 237, 237, 1);
+    width: 100vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: 0;
+}
