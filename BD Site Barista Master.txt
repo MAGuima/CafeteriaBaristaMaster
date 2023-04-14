@@ -1,0 +1,22 @@
+CREATE TABLE PRODUTOS (
+	codigo_produto INT NOT NULL AUTO_INCREMENT,
+	categoria_produto VARCHAR(30) NOT NULL,
+	subcategoria_produto VARCHAR(30),
+	nome_produto VARCHAR(50) NOT NULL,
+	descritivo VARCHAR(200),
+	preco_custo DECIMAL(10,2),
+	preco_venda DECIMAL(10,2),
+	marca VARCHAR(30),
+ 	modelo VARCHAR(30),
+	unidade VARCHAR(10),
+	produto_ativo BOOLEAN NOT NULL DEFAULT true,
+	estoque_total INT,
+	estoque_minimo INT,
+	origem VARCHAR(50),
+	NCM VARCHAR(10),
+	CEST VARCHAR(10),
+	data_inicial DATE DEFAULT NULL,
+	data_final DATE DEFAULT NULL,
+	hora TIME DEFAULT NULL,
+	PRIMARY KEY (codigo_produto)
+);
