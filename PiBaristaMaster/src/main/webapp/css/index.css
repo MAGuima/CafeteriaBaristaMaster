@@ -5,72 +5,99 @@ body {
 }
 
 .telaPrincipal {
-    border: solid; border-width: 3px; border-color: red;
+    max-width: 1920px;
+    max-height: 1080px;
+    min-width: 800px;
+    border: solid; border-width: 1px; border-color: yellow;
     background-image: url(../imagens/Background_Principal.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
+    margin: 0 auto;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
+}
+
+.telaQuemSomos {
+    max-width: 1920px;
+    max-height: 1080px;
+    border: solid; border-width: 1px; border-color: blue;
+    background-color: rgba(237, 237, 237, 1);
+    width: 100vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.telaEventos {
+    max-width: 1920px;
+    max-height: 1080px;
+    border: solid; border-width: 1px; border-color: green;
+    background-color: rgba(237, 237, 237, 1);
+    width: 100vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.telaMenu {
+    max-width: 1920px;
+    max-height: 1080px;
+    border: solid; border-width: 1px; border-color: yellow;
+    background-color: rgba(237, 237, 237, 1);
+    width: 100vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.telaCursos {
+    max-width: 1920px;
+    max-height: 1080px;
+    border: solid; border-width: 1px; border-color: blue;
+    background-color: rgba(237, 237, 237, 1);
+    width: 100vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.telaContato {
+    max-width: 1920px;
+    max-height: 1080px;
+    border: solid; border-width: 1px; border-color: green;
+    background-color: rgba(237, 237, 237, 1);
+    width: 100vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a {
-    font-size: 16px;
+    font-size: 14px;
     color: black;
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
     text-align: center;
-    padding: 10px;
+    padding: 14px 15px;
 }
 
-button{
-    background-color: rgba(237, 237, 237, 1);
-    border-radius: 5px;
-    margin: 5px;
-    padding: 10px;
-}
-
-button:hover{
-background-color: rgba(28, 116, 98, 1);
-box-shadow: inset 2px 2px 2px white;
-}
-
-a:hover{
-color: white;
-}
-
-.containerBotoesIndex {
+.logoPrincipal{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    padding: 10px;
-    margin: 30px;
+    margin-top: 280px;
 }
 
-.telaLoja {
-    border: solid; border-width: 3px; border-color: blue;
-    background-color: rgba(237, 237, 237, 1);
-    width: 100vw;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
+.logotipo{
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    position: center;
 }
-.telaEventos {
-    border: solid; border-width: 3px; border-color: green;
-    background-color: rgba(237, 237, 237, 1);
-    width: 100vw;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 * {
-margin: 0;
-padding: 0;
-box-sizing: 0;
+    /*border: solid; border-width: 1px; border-color: red;*/
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
 }
