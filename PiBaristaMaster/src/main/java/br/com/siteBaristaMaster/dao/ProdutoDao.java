@@ -9,6 +9,7 @@ import java.sql.Date;
 import java.sql.Time;
 public class ProdutoDao {
     public void createProduto(Produtos produtos) {
+        
         String SQL = "INSERT INTO PRODUTOS (nome_produto,categoria_produto,subcategoria_produto,descritivo,preco_custo,preco_venda,marca,modelo,unidade,produto_ativo,estoque_total,estoque_minimo,origem,NCM,CEST,data_inicial,data_final,hora) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         try {
