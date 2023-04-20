@@ -1,5 +1,5 @@
 CREATE TABLE PRODUTOS (
-	codigo_produto INT NOT NULL AUTO_INCREMENT,
+	codigo_produto INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	categoria_produto VARCHAR(30) NOT NULL,
 	subcategoria_produto VARCHAR(30),
 	nome_produto VARCHAR(50) NOT NULL,
@@ -17,6 +17,5 @@ CREATE TABLE PRODUTOS (
 	CEST VARCHAR(10),
 	data_inicial DATE DEFAULT NULL,
 	data_final DATE DEFAULT NULL,
-	hora TIME DEFAULT NULL,
-	PRIMARY KEY (codigo_produto)
+	hora TIME DEFAULT NULL
 );
