@@ -2,11 +2,11 @@ package br.com.siteBaristaMaster.model;
 import java.sql.Date;
 import java.sql.Time;
 public class Produtos {
-
     private String nome_produto;
     private String categoria_produto;
     private String subcategoria_produto;
     private String descritivo;
+    private String precoCustoString;
     private double preco_custo;
     private double preco_venda;
     private String marca;
@@ -21,6 +21,23 @@ public class Produtos {
     private Date data_inicial;
     private Date data_final;
     private Time hora;
+    private String precoVendaString;
+
+    public String getPrecoVendaString() {
+        return precoVendaString;
+    }
+
+    public void setPrecoVendaString(String precoVendaString) {
+        this.precoVendaString = precoVendaString;
+    }
+
+    public String getPrecoCustoString() {
+        return precoCustoString;
+    }
+
+    public void setPrecoCustoString(String precoCustoString) {
+        this.precoCustoString = precoCustoString;
+    }
 
     public String getCategoria_produto() {
         return categoria_produto;

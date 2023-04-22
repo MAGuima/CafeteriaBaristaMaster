@@ -34,15 +34,11 @@ public class ProdutoDao {
             preparedStatement.setString(13, produtos.getOrigem());
             preparedStatement.setString(14, produtos.getNCM());
             preparedStatement.setString(15, produtos.getCEST());
-            preparedStatement.setDate(16, produtos.getData_inicial());
-            preparedStatement.setDate(17, produtos.getData_final());
-            preparedStatement.setTime(18, produtos.getHora());
+
 
             preparedStatement.executeUpdate();
 
             System.out.println("success in insert product");
-
-
 
             connection.close();
 

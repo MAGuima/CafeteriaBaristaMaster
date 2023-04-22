@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Date;
-import java.sql.Time;
 
 @WebServlet("/create-produto")
 public class CreateProdutoServlet extends HttpServlet {
@@ -30,24 +28,29 @@ public class CreateProdutoServlet extends HttpServlet {
         String modelo = request.getParameter("modelo");
         String unidade = request.getParameter("unidade");
         boolean produto_ativo = Boolean.parseBoolean(request.getParameter("produto_ativo"));
-        int estoque_total = Integer.parseInt(request.getParameter("estoque_total"));
-        int estoque_minimo = Integer.parseInt(request.getParameter("estoque_minimo"));
+
+
+//        int estoque_total = Integer.parseInt(request.getParameter("estoque_total"));
+//        int estoque_minimo = Integer.parseInt(request.getParameter("estoque_minimo"));
         String origem = request.getParameter("origem");
         String NCM = request.getParameter("NCM");
         String CEST = request.getParameter("CEST");
-        Date data_inicial= Date.valueOf(request.getParameter("data_inicial"));
-        Date data_final = Date.valueOf(request.getParameter("data_final"));
-        Time hora = Time.valueOf(request.getParameter("hora"));
+//        Date data_inicial= Date.valueOf(request.getParameter("data_inicial"));
+//        Date data_final = Date.valueOf(request.getParameter("data_final"));
+//        Time hora = Time.valueOf(request.getParameter("hora"));
 
 
 
         Produtos produtos = new Produtos();
-        produtos.setNome_produto(nomeProduto);
-        produtos.setNome_produto(categoria_produto);
-        produtos.setNome_produto(subcategoria_produto);
-        produtos.setNome_produto(descritivo);
-
-
+        //produtos.setNome_produto(nomeProduto);
+        produtos.setCategoria_produto(categoria_produto);
+        produtos.setSubcategoria_produto(subcategoria_produto);
+        produtos.setDescritivo(descritivo);
+        produtos.setPrecoCustoString(precoCustoString);
+        produtos.setPrecoVendaString(precoVendaString);
+        produtos.setMarca(marca);
+        produtos.setModelo(modelo);
+        produtos.setUnidade(unidade);
 
         ProdutoDao produtoDao = new ProdutoDao();
         produtoDao.createProduto(produtos);
