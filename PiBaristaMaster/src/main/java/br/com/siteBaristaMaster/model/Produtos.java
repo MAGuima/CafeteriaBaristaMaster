@@ -2,7 +2,7 @@ package br.com.siteBaristaMaster.model;
 import java.sql.Date;
 import java.sql.Time;
 public class Produtos {
-
+    private String codigo_produto;
     private String nome_produto;
     private String categoria_produto;
     private String subcategoria_produto;
@@ -41,6 +41,30 @@ public class Produtos {
         this.NCM = NCM;
         this.CEST = CEST;
 //        this.precoVendaString = precoVendaString;
+    }
+
+    public Produtos(String codigo_produto,String nome_produto, String categoria_produto, String subcategoria_produto, String descritivo, /*String precoCustoString,*/ double preco_custo, double preco_venda, String marca, String modelo, String unidade, int estoque_total, int estoque_minimo, String origem, String NCM, String CEST/*, String precoVendaString*/) {
+        this.codigo_produto = codigo_produto;
+        this.nome_produto = nome_produto;
+        this.categoria_produto = categoria_produto;
+        this.subcategoria_produto = subcategoria_produto;
+        this.descritivo = descritivo;
+//        this.precoCustoString = precoCustoString;
+        this.preco_custo = preco_custo;
+        this.preco_venda = preco_venda;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.unidade = unidade;
+        this.estoque_total = estoque_total;
+        this.estoque_minimo = estoque_minimo;
+        this.origem = origem;
+        this.NCM = NCM;
+        this.CEST = CEST;
+//        this.precoVendaString = precoVendaString;
+    }
+
+    public String getCodigo_produto() {
+        return codigo_produto;
     }
 
     public String getPrecoVendaString() {

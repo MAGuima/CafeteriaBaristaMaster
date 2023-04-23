@@ -71,7 +71,7 @@ public class ProdutoDao {
             List<Produtos> produtos = new ArrayList<>();
 
             while (resultSet.next()) {
-
+                String codigo_produto = resultSet.getString("codigo_produto");
                 String nome_produto = resultSet.getString("nome_produto");
                 String categoria_produto = resultSet.getString("categoria_produto");
                 String subcategoria_produto = resultSet.getString("subcategoria_produto");
@@ -89,7 +89,7 @@ public class ProdutoDao {
                 String CEST = resultSet.getString("CEST");
                 //String precoVendaString = resultSet.getString("precoVendaString");
 
-                Produtos produto = new Produtos(nome_produto,categoria_produto,subcategoria_produto,descritivo,/*precoCustoString,*/preco_custo,preco_venda,marca,modelo,unidade,estoque_total,estoque_minimo,origem,NCM,CEST/*,precoVendaString*/);
+                Produtos produto = new Produtos(codigo_produto,nome_produto,categoria_produto,subcategoria_produto,descritivo,/*precoCustoString,*/preco_custo,preco_venda,marca,modelo,unidade,estoque_total,estoque_minimo,origem,NCM,CEST/*,precoVendaString*/);
 
                 produtos.add(produto);
 
@@ -108,6 +108,31 @@ public class ProdutoDao {
             return Collections.emptyList();
 
         }
+
+    }
+
+    public void deleteProdutoById(String codigo_produto){
+            String SQL = "DELETE PRODUTOS WHERE CODIGO_PRODUTO = ?";
+
+            try{
+
+                Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+
+                System.out.println("success in database connection");
+
+                PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+                preparedStatement.setString(1, codigo_produto);
+                preparedStatement.executeUpdate();
+
+                System.out.println("success in insert product");
+
+                connection.close();
+
+
+            } catch (Exception e){
+                System.out.println("Fail in database connection " + e.getMessage());
+            }
 
     }
 

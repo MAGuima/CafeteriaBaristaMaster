@@ -25,14 +25,14 @@
             <th>origem</th>
             <th>NCM</th>
             <th>CEST</th>
-           <th></th>
+           <th>Actions</th>
         </tr>
 
         <c:forEach var="produtos" items="${produtos}">
 
         <tr>
 
-
+                        <td>${produtos.codigo_produto}</td>
                         <td>${produtos.categoria_produto}</td>
                         <td>${produtos.subcategoria_produto}</td>
                         <td>${produtos.nome_produto}</td>
@@ -47,6 +47,12 @@
                         <td>${produtos.origem}</td>
                         <td>${produtos.NCM}</td>
                         <td>${produtos.CEST}</td>
+                        <td>
+                            <form action="/delete-produto" method="post">
+                              <input type="hidden" codigo_produto="codigo_produto" name="codigo_produto" value="${produtos.codigo_produto}">
+                              <button type="submit">Delete</button>
+                            </form>
+                        </td>
         </tr>
         </c:forEach>
     </table>
