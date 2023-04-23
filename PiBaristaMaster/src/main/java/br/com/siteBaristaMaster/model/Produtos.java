@@ -2,6 +2,7 @@ package br.com.siteBaristaMaster.model;
 import java.sql.Date;
 import java.sql.Time;
 public class Produtos {
+
     private String nome_produto;
     private String categoria_produto;
     private String subcategoria_produto;
@@ -23,165 +24,144 @@ public class Produtos {
     private Time hora;
     private String precoVendaString;
 
+    public Produtos(String nome_produto, String categoria_produto, String subcategoria_produto, String descritivo, /*String precoCustoString,*/ double preco_custo, double preco_venda, String marca, String modelo, String unidade, int estoque_total, int estoque_minimo, String origem, String NCM, String CEST/*, String precoVendaString*/) {
+        this.nome_produto = nome_produto;
+        this.categoria_produto = categoria_produto;
+        this.subcategoria_produto = subcategoria_produto;
+        this.descritivo = descritivo;
+//        this.precoCustoString = precoCustoString;
+        this.preco_custo = preco_custo;
+        this.preco_venda = preco_venda;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.unidade = unidade;
+        this.estoque_total = estoque_total;
+        this.estoque_minimo = estoque_minimo;
+        this.origem = origem;
+        this.NCM = NCM;
+        this.CEST = CEST;
+//        this.precoVendaString = precoVendaString;
+    }
+
     public String getPrecoVendaString() {
         return precoVendaString;
     }
 
-    public void setPrecoVendaString(String precoVendaString) {
-        this.precoVendaString = precoVendaString;
-    }
+
 
     public String getPrecoCustoString() {
         return precoCustoString;
     }
 
-    public void setPrecoCustoString(String precoCustoString) {
-        this.precoCustoString = precoCustoString;
-    }
+
 
     public String getCategoria_produto() {
         return categoria_produto;
     }
 
-    public void setCategoria_produto(String categoria_produto) {
-        this.categoria_produto = categoria_produto;
-    }
+
 
     public String getSubcategoria_produto() {
         return subcategoria_produto;
     }
 
-    public void setSubcategoria_produto(String subcategoria_produto) {
-        this.subcategoria_produto = subcategoria_produto;
-    }
+
 
     public String getDescritivo() {
         return descritivo;
     }
 
-    public void setDescritivo(String descritivo) {
-        this.descritivo = descritivo;
-    }
+
 
     public double getPreco_custo() {
         return preco_custo;
     }
 
-    public void setPreco_custo(double preco_custo) {
-        this.preco_custo = preco_custo;
-    }
+
 
     public double getPreco_venda() {
         return preco_venda;
     }
 
-    public void setPreco_venda(double preco_venda) {
-        this.preco_venda = preco_venda;
-    }
+
 
     public String getMarca() {
         return marca;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
+
 
     public String getModelo() {
         return modelo;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
+
 
     public String getUnidade() {
         return unidade;
     }
 
-    public void setUnidade(String unidade) {
-        this.unidade = unidade;
-    }
+
 
     public boolean isProduto_ativo() {
         return produto_ativo;
     }
 
-    public void setProduto_ativo(boolean produto_ativo) {
-        this.produto_ativo = produto_ativo;
-    }
+
 
     public int getEstoque_total() {
         return estoque_total;
     }
 
-    public void setEstoque_total(int estoque_total) {
-        this.estoque_total = estoque_total;
-    }
+
 
     public int getEstoque_minimo() {
         return estoque_minimo;
     }
 
-    public void setEstoque_minimo(int estoque_minimo) {
-        this.estoque_minimo = estoque_minimo;
-    }
+
 
     public String getOrigem() {
         return origem;
     }
 
-    public void setOrigem(String origem) {
-        this.origem = origem;
-    }
+
 
     public String getNCM() {
         return NCM;
     }
 
-    public void setNCM(String NCM) {
-        this.NCM = NCM;
-    }
+
 
     public String getCEST() {
         return CEST;
     }
 
-    public void setCEST(String CEST) {
-        this.CEST = CEST;
-    }
+
 
     public Date getData_inicial() {
         return data_inicial;
     }
 
-    public void setData_inicial(Date data_inicial) {
-        this.data_inicial = data_inicial;
-    }
+
 
     public Date getData_final() {
         return data_final;
     }
 
-    public void setData_final(Date data_final) {
-        this.data_final = data_final;
-    }
+
 
     public Time getHora() {
         return hora;
     }
 
-    public void setHora(Time hora) {
-        this.hora = hora;
-    }
+
 
     public String getNome_produto() {
         return nome_produto;
     }
 
 
-    public void setNome_produto(String nome_produto) {
-        this.nome_produto = nome_produto;
-    }
+
 
 }
