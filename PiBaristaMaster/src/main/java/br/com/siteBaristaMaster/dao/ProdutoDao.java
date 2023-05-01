@@ -33,7 +33,6 @@ public class ProdutoDao {
             preparedStatement.setString(7, produtos.getMarca());
             preparedStatement.setString(8, produtos.getModelo());
             preparedStatement.setString(9, produtos.getUnidade());
-            //preparedStatement.setBoolean(10, produtos.isProduto_ativo());
             preparedStatement.setInt(10, produtos.getEstoque_total());
             preparedStatement.setInt(11, produtos.getEstoque_minimo());
             preparedStatement.setString(12, produtos.getOrigem());
@@ -133,6 +132,46 @@ public class ProdutoDao {
             } catch (Exception e){
                 System.out.println("Fail in database connection " + e.getMessage());
             }
+
+    }
+
+    public void updateProduto(Produtos produtos){
+
+        String SQL = "UPDATE PRODUTOS SET NAME = ? WHERE ID = ?";
+        try{
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
+
+            System.out.println("Sucess in database conenction");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1,produtos.getCodigo_produto());
+            preparedStatement.setString(2, produtos.getNome_produto());
+            preparedStatement.setString(3, produtos.getCategoria_produto());
+            preparedStatement.setString(4, produtos.getSubcategoria_produto());
+            preparedStatement.setString(5, produtos.getDescritivo());
+            preparedStatement.setDouble(6, produtos.getPreco_custo());
+            preparedStatement.setDouble(7, produtos.getPreco_venda());
+            preparedStatement.setString(8, produtos.getMarca());
+            preparedStatement.setString(9, produtos.getModelo());
+            preparedStatement.setString(10, produtos.getUnidade());
+            preparedStatement.setInt(11, produtos.getEstoque_total());
+            preparedStatement.setInt(12, produtos.getEstoque_minimo());
+            preparedStatement.setString(13, produtos.getOrigem());
+            preparedStatement.setString(14, produtos.getNCM());
+            preparedStatement.setString(15, produtos.getCEST());
+            preparedStatement.execute();
+
+            System.out.println("Sucess in update produto");
+
+            connection.close();
+
+
+        }catch (Exception e){
+            System.out.println("Fail in database connection");
+            System.out.println("Error + " + e.getMessage());
+        }
+
 
     }
 
