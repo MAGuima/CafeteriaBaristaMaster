@@ -137,7 +137,7 @@ public class ProdutoDao {
 
     public void updateProduto(Produtos produtos){
 
-        String SQL = "UPDATE PRODUTOS SET NAME = ? WHERE ID = ?";
+        String SQL = "UPDATE PRODUTOS SET NOME_PRODUTO = ? WHERE CODIGO_PRODUTO = ?";
         try{
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
 
@@ -145,21 +145,22 @@ public class ProdutoDao {
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-            preparedStatement.setString(1,produtos.getCodigo_produto());
-            preparedStatement.setString(2, produtos.getNome_produto());
-            preparedStatement.setString(3, produtos.getCategoria_produto());
-            preparedStatement.setString(4, produtos.getSubcategoria_produto());
-            preparedStatement.setString(5, produtos.getDescritivo());
-            preparedStatement.setDouble(6, produtos.getPreco_custo());
-            preparedStatement.setDouble(7, produtos.getPreco_venda());
-            preparedStatement.setString(8, produtos.getMarca());
-            preparedStatement.setString(9, produtos.getModelo());
-            preparedStatement.setString(10, produtos.getUnidade());
-            preparedStatement.setInt(11, produtos.getEstoque_total());
-            preparedStatement.setInt(12, produtos.getEstoque_minimo());
-            preparedStatement.setString(13, produtos.getOrigem());
-            preparedStatement.setString(14, produtos.getNCM());
-            preparedStatement.setString(15, produtos.getCEST());
+            preparedStatement.setString(1, produtos.getNome_produto());
+            preparedStatement.setString(2,produtos.getCodigo_produto());
+
+//            preparedStatement.setString(3, produtos.getCategoria_produto());
+//            preparedStatement.setString(4, produtos.getSubcategoria_produto());
+//            preparedStatement.setString(5, produtos.getDescritivo());
+//            preparedStatement.setDouble(6, produtos.getPreco_custo());
+//            preparedStatement.setDouble(7, produtos.getPreco_venda());
+//            preparedStatement.setString(8, produtos.getMarca());
+//            preparedStatement.setString(9, produtos.getModelo());
+//            preparedStatement.setString(10, produtos.getUnidade());
+//            preparedStatement.setInt(11, produtos.getEstoque_total());
+//            preparedStatement.setInt(12, produtos.getEstoque_minimo());
+//            preparedStatement.setString(13, produtos.getOrigem());
+//            preparedStatement.setString(14, produtos.getNCM());
+//            preparedStatement.setString(15, produtos.getCEST());
             preparedStatement.execute();
 
             System.out.println("Sucess in update produto");

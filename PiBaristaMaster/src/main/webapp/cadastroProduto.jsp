@@ -21,7 +21,7 @@
                 <div>
                     <label>Codigo:</label> <!-- nome do campo -->
                     <div>
-                        <input type="text" name="codigo_produto" id="codigo_produto"> <!-- "input" para que o usuario possa escrever o valor do campo -->
+                        <input type="text" name="codigo_produto" id="codigo_produto" value="${param.id}"> <!-- "input" para que o usuario possa escrever o valor do campo -->
                     </div>
                 </div>
             </li>
@@ -30,7 +30,7 @@
                 <div>
                     <label>Categoria:</label>
                     <div>
-                        <input type="text" name="categoria_produto" id="categoria_produto">
+                        <input type="text" name="categoria_produto" id="categoria_produto" value="${param.name}">
                     </div>
                 </div>
             </li>

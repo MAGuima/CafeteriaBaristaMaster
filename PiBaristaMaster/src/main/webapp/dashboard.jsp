@@ -58,11 +58,9 @@
                             </form>
 
                             <form action="/create-produto" method="post">
-
                                 <label>Nome produto</label>
-                                <input type="text" name="nome_produto" id="codigo_produto" value="${param.nome_produto}">
-                                <input type="hidden" id="codigo_produto" name="nome_produto" value="${param.codigo_produto}">
-
+                                <input type="text" name="nome_produto" id="nome_produto" value="${param.nome_produto}">
+                                <input type="hidden" id="codigo_produto" name="codigo_produto" value="${param.codigo_produto}">
                                 <button type="submit">Save</button>
 
                             </form>

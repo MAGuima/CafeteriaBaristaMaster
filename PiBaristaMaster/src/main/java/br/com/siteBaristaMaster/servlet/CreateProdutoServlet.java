@@ -34,10 +34,9 @@ public class CreateProdutoServlet extends HttpServlet {
         String NCM = request.getParameter("NCM");
         String CEST = request.getParameter("CEST");
 
-        Produtos produtos = new Produtos(codigo_produto,nomeProduto,categoria_produto,subcategoria_produto,descritivo,/*precoCustoString,*/preco_custo,preco_venda,marca,modelo,unidade,estoque_total,estoque_minimo,origem,NCM,CEST/*,precoVendaString*/);
+        Produtos produtos = new Produtos(codigo_produto,nomeProduto,categoria_produto,subcategoria_produto,descritivo,preco_custo,preco_venda,marca,modelo,unidade,estoque_total,estoque_minimo,origem,NCM,CEST);
 
         ProdutoDao produtoDao = new ProdutoDao();
-        produtoDao.createProduto(produtos);
 
         if(codigo_produto.isBlank()){
             produtoDao.createProduto(produtos);
