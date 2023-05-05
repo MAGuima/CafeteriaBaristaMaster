@@ -1,75 +1,19 @@
+/* CONFIGURAÇÕES GERAIS INDEX E SITE */
+
+* {
+    /*border: solid; border-width: 1px; border-color: red;*/
+    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    box-sizing: 0px;
+    margin: 0;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     color: black;
     background-color: grey;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
-}
-
-.telaPrincipal {
-    max-width: 1920px;
-    max-height: 1080px;
-    min-width: 800px;
-    border: solid; border-width: 1px; border-color: yellow;
-    background-image: url(../imagens/Background_Principal.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    width: 100vw;
-    height: 100vh;
-}
-
-.telaQuemSomos {
-    max-width: 1920px;
-    max-height: 1080px;
-    border: solid; border-width: 1px; border-color: blue;
-    background-color: rgba(237, 237, 237, 1);
-    width: 100vw;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.telaEventos {
-    max-width: 1920px;
-    max-height: 1080px;
-    border: solid; border-width: 1px; border-color: green;
-    background-color: rgba(237, 237, 237, 1);
-    width: 100vw;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.telaMenu {
-    max-width: 1920px;
-    max-height: 1080px;
-    border: solid; border-width: 1px; border-color: yellow;
-    background-color: rgba(237, 237, 237, 1);
-    width: 100vw;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.telaCursos {
-    max-width: 1920px;
-    max-height: 1080px;
-    border: solid; border-width: 1px; border-color: blue;
-    background-color: rgba(237, 237, 237, 1);
-    width: 100vw;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.telaContato {
-    max-width: 1920px;
-    max-height: 1080px;
-    border: solid; border-width: 1px; border-color: green;
-    background-color: rgba(237, 237, 237, 1);
-    width: 100vw;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 a {
@@ -79,25 +23,354 @@ a {
     font-weight: bold;
     text-decoration: none;
     text-align: center;
-    padding: 14px 15px;
+    padding: 15px 15px;
+}
+
+h1 {
+    color: black;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 80px 20px 0px 40px;
+}
+
+h2 {
+    color: black;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 20px 20px 20px 40px;
+}
+
+p {
+    color: black;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: justify;
+    padding: 80px 40px 0px 40px;
+}
+
+/* CONFIGURAÇÕES TELA PRINCIPAL */
+
+.containerPrincipal {
+    display: flex;
+    background-image: url(../imagens/Background_Principal.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    max-width: 1024px;
+    max-height: 768px;
+    min-width: 400px;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.menuSuperior {
+    max-width: 1024px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    margin-top: 10px;
+    width: 100%;
+    filter: drop-shadow(10px 10px 3px rgba( 0 0 0 / 50%));
+}
+
+.menuSuperior div:hover {
+    background-color: rgba(28, 116, 98, 1);
+    box-shadow: inset 3px 2px 8px white;
+    transition: 0.3s;
+}
+
+.menuSuperior div {
+    background-color: rgba(237, 237, 237, 1);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+}
+
+a:hover {
+    color: white;
+    transition: 1s;
+}
+
+.containerLogo {
+    margin: auto;
+}
+
+.logotipo {
+    padding: 20px;
+    max-width: 250px;
+    max-height: 250px;
+    min-width: 150px;
 }
 
 .logoPrincipal{
+    align-self: center;
+}
+
+/* CONFIGURAÇÕES TELA QUEM SOMOS */
+
+.containerQuemSomos {
+    border: solid; border-width: 2px; border-color: orange;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    max-width: 1024px;
+    width: 100vw;
+    max-height: 768px;
+    height: 100vh;
+    min-width: 400px;
+    background-size: 100%;
+    background-color: rgba(237, 237, 237, 1);
+    margin: 0 auto;
+}
+
+.containerQuemSomos p {
+    color: white;
+}
+
+.cxtexto {
+    border: solid; border-width: 2px; border-color: green;
+    display: flex;
+    align-items: stretch;
+    width: 1024px;
+    height: 100%;
+}
+
+.cxt1 {
+border: solid; border-width: 2px; border-color: blue;
+    background: #EDEDED;
+    max-width: 50%;
+}
+
+.cxt2 {
+border: solid; border-width: 2px; border-color: red;
+    background: #50897D;
+    max-width: 50%;
+}
+
+.contImgLoja {
     display: flex;
     justify-content: center;
-    margin-top: 280px;
+    position: absolute;
+    width: 100vw;
+    max-width: 1024px;
+    max-height: 768px;
 }
 
-.logotipo{
+.contImgLoja img {
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 100px;
+    height: 100%;
+    width: 100%;
+    padding: 20px 20px 0px 20px;
+}
+
+.telaQuemSomos p {
+    color: white;
+    padding: 80px 40px 0px 40px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: justify;
+ }
+
+/* CONFIGURAÇÕES TELA EVENTOS */
+
+.containerEventos {
+    border: solid; border-width: 1px; border-color: yellow;
     display: flex;
-    max-width: 100%;
-    max-height: 100%;
-    position: center;
+    justify-content: center;
+    max-width: 1024px;
+    max-height: 768px;
+    min-width: 400px;
+    width: 1024px;
+    height: 768px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #EDEDED;
 }
 
-* {
-    /*border: solid; border-width: 1px; border-color: red;*/
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
+.contImgEventos {
+    border: solid; border-width: 2px; border-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.imgEventos {
+    border: solid; border-width: 2px; border-color: green;
+    align-self: flex-end;
+    width: 100%;
+    height: auto;
+    min-width: 200px;
+    min-height: auto;
+    padding: 0px;
+}
+
+.contTxtEventos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 982px;
+}
+
+.cxt1_eventos {
+    width: 480px;
+    height: 260px;
+    background: #EDEDED;
+    margin: 0 auto;
+}
+
+.cxt2_eventos {
+    background-color: white;
+    height: 508px;
+}
+
+.containerEventos p {
+    color: black;
+    padding: 40px 40px 10px 40px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: justify;
+ }
+
+/* CONFIGURAÇÕES TELA CURSOS */
+
+.containerCursos {
+    border: solid; border-width: 2px; border-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1024px;
+    max-height: 768px;
+    min-width: 400px;
+    background: #F5F5F5;
+    width: 100vw;
+    height: 100vh;
+    height: 768px;
+    margin: 0 auto;
+}
+
+.contTxtCursos {
+    border: solid; border-width: 2px; border-color: yellow;
+    width: 1024px;
+    height: 260px;
+    background: #EDEDED;
+    margin: 0 auto;
+}
+
+.contImgCursos {
+    border: solid; border-width: 2px; border-color: yellow;
+    background: #F5F5F5;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1024px;
+    height: auto;
+    min-width: 400px;
+}
+
+.imgIcon {
+    border: solid; border-width: 2px; border-color: blue;
+    align-self: center;
+    margin: 0px 10px;
+}
+
+.imgEspresso {
+    border: solid; border-width: 2px; border-color: blue;
+    align-self: flex-end;
+    height: auto;
+    min-height: auto;
+}
+
+.imgBarista {
+    border: solid; border-width: 2px; border-color: blue;
+    align-self: flex-end;
+    height: auto;
+    min-height: auto;
+}
+
+/* CONFIGURAÇÕES TELA MENU */
+
+.containerMenu {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    max-width: 1024px;
+    max-height: 768px;
+    min-width: 400px;
+    background-color: #B6BCBD;
+    width: 100vw;
+    height: 100vh;
+    height: 768px;
+    margin: 0 auto;
+}
+
+.contTxtMenu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1024px;
+    height: 290px;
+    background: #EDEDED;
+    margin: 0 auto;
+}
+
+.contImgMenu img {
+    max-width: 150px;
+    max-height: 150px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.contImgMenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-end;
+    max-width: 1024px;
+    width: 1024px;
+    height: 440px;
+}
+
+.contImgMenu div:hover {
+    box-shadow: 2px 3px 20px 2px #000000;
+    transition: 0.5s;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.contImgMenu div {
+    border: solid; border-width: 2px; border-color: red;
+    background-color: #F5F5F5;
+    max-width: 200px;
+    max-height: 210px;
+    min-width: 150px;
+    width: 100vw;
+    height: 40vh;
+    text-align: center;
+    align-item: center;
+    margin: 0 auto;
+    flex: 1 1 10%;
+    margin: 10px 10px 0px 10px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+/* CONFIGURAÇÕES TELA CONTATO */
+
+.containerContato {
+    color: black;
+    background-color: #EDEDED;
+    max-width: 1024px;
+    height: 300px;
+    background-color: ;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    padding-button: 50px;
+}
+
+.containerContato h2 {
+    padding: 0px;
 }

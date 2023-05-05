@@ -1,0 +1,70 @@
+.containerEventos { /* Area total do container de eventos */
+border: solid; border-width: 2px; border-color: blue;
+    background-color: #EDEDED;
+    display: flex;
+    justify-content: center;
+    max-width: 1024px;
+    max-height: auto;
+    min-width: 400px;
+    width: 1024px;
+    height: 768px;
+    margin: 0 auto;
+}
+
+.contImgEventos { /* container Figure da Section de Eventos */
+border: solid; border-width: 2px; border-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.imgEventos { /* foto do Barista preparando o espresso */
+border: solid; border-width: 2px; border-color: green;
+    align-self: flex-end;
+    width: 100%;
+    height: auto;
+    min-width: 200px;
+    min-height: auto;
+    padding: 0px;
+}
+
+.contTxtEventos { /* container com os textos da Section Eventos */
+    display: flex;
+    flex-wrap: wrap;
+    width: 982px;
+
+}
+.cxt1_eventos {
+    width: 480px;
+    height: 260px;
+    background: #EDEDED;
+    margin: 0 auto;
+}
+
+.cxt2_eventos {
+    background-color: white;
+    height: 508px;
+}
+
+.containerEventos h1 {
+    color: black;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 40px 20px 0px 40px;
+ }
+
+ .containerEventos h2 {
+    color: black;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 20px 20px 20px 40px;
+  }
+
+.containerEventos p {
+    color: black;
+    padding: 40px 40px 10px 40px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: justify;
+ }

@@ -3,16 +3,22 @@ body {
     font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     border: solid; border-width: 3px; border-color: grey;
     margin: auto;
+    max-width: 1920px;
+    max-height: 1080px;
+    min-width: 500px;
 }
 
-.containerHead{
+.containerHead {
+    max-width: 1920px;
+    max-height: 1080px;
+    min-width: 500px;
     background-image: url(../imagens/background_cadastro.jpg);
     background-size: 100%;
     width: 100vw;
     margin: 0 auto;
 }
 
-.tela{
+.tela {
     background-color: #EDEDED;
     padding: 20px;
 }
@@ -46,18 +52,18 @@ li { /*   lista dos campos <li>   */
     height: 60px;
 }
 
-button:hover{
-background-color: rgba(28, 116, 98, 1);
-box-shadow: inset 2px 2px 2px white;
+button:hover {
+    background-color: rgba(28, 116, 98, 1);
+    box-shadow: inset 2px 2px 2px white;
 }
 
-.containerBotoes{
+.containerBotoes {
     flex-direction: row;
     padding: 10px;
     margin: 0px;
 }
 
-.btIncluir, .btCancelar, .btImagem, .btVoltar{   /*   efeito dos botões   */
+.btIncluir, .btCancelar, .btImagem, .btVoltar {   /*   efeito dos botões   */
     background-color: rgba(133, 128, 128, 1);
     border-radius: 30px;
     margin: 5px;

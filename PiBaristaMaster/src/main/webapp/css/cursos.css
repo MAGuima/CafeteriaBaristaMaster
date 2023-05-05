@@ -1,0 +1,62 @@
+.containerCursos { /* Area: Container na index-Curso */
+    border: solid; border-width: 1px; border-color: green;
+    background: #F5F5F5;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1024px;
+    max-height: 768px;
+    min-width: 400px;
+    width: 1024px;
+    height: 768px;
+    margin: 0 auto;
+}
+
+.contTxtCursos {
+    width: 1024px;
+    height: 260px;
+    background: #EDEDED;
+    margin: 0 auto;
+}
+
+.contImgCursos {
+    background: #F5F5F5;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1024px;
+    height: auto;
+    min-width: 400px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.ImgIcon {
+    align-self: center;
+    margin: 0px 10px;
+}
+
+.ImgEspresso {
+    align-self: flex-end;
+    height: auto;
+    min-height: auto;
+}
+
+.ImgBarista {
+    align-self: flex-end;
+    height: auto;
+    min-height: auto;
+}
+
+.contTxtCursos h1 {
+    color: black;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 40px 20px 0px 40px;x;
+ }
+
+ .contTxtCursos h2 {
+    color: black;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 20px 20px 20px 40px;
+  }
