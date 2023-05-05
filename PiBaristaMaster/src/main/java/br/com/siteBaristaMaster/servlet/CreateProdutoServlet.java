@@ -9,51 +9,42 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Date;
-import java.sql.Time;
 
 @WebServlet("/create-produto")
 public class CreateProdutoServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
+        String codigo_produto = request.getParameter("codigo_produto");
         String nomeProduto = request.getParameter("nome_produto");
         String categoria_produto = request.getParameter("categoria_produto");
         String subcategoria_produto = request.getParameter("subcategoria_produto");
         String descritivo = request.getParameter("descritivo");
-        String precoCustoString = request.getParameter("preco_custo");
-        double preco_custo = precoCustoString.isEmpty() || precoCustoString == null ? 0.0 : Double.parseDouble(precoCustoString);
-        String precoVendaString = request.getParameter("preco_venda");
-        double preco_venda = precoVendaString.isEmpty() || precoVendaString == null ? 0.0 : Double.parseDouble(precoVendaString);
+        double preco_custo = Double.parseDouble(request.getParameter("preco_custo"));
+        double preco_venda = Double.parseDouble(request.getParameter("preco_venda"));
         String marca = request.getParameter("marca");
         String modelo = request.getParameter("modelo");
         String unidade = request.getParameter("unidade");
         boolean produto_ativo = Boolean.parseBoolean(request.getParameter("produto_ativo"));
-        int estoque_total = Integer.parseInt(request.getParameter("estoque_total"));
-        int estoque_minimo = Integer.parseInt(request.getParameter("estoque_minimo"));
+        String estoqueTotalParam = request.getParameter("estoque_total");
+        int estoque_total = estoqueTotalParam != null ? Integer.parseInt(estoqueTotalParam) : 0;
+        String estoqueMinimoParam = request.getParameter("estoque_minimo");
+        int estoque_minimo = estoqueMinimoParam != null ? Integer.parseInt(estoqueMinimoParam) : 0;
         String origem = request.getParameter("origem");
         String NCM = request.getParameter("NCM");
         String CEST = request.getParameter("CEST");
-        Date data_inicial= Date.valueOf(request.getParameter("data_inicial"));
-        Date data_final = Date.valueOf(request.getParameter("data_final"));
-        Time hora = Time.valueOf(request.getParameter("hora"));
 
-
-
-        Produtos produtos = new Produtos();
-        produtos.setNome_produto(nomeProduto);
-        produtos.setNome_produto(categoria_produto);
-        produtos.setNome_produto(subcategoria_produto);
-        produtos.setNome_produto(descritivo);
-
-
+        Produtos produtos = new Produtos(codigo_produto,nomeProduto,categoria_produto,subcategoria_produto,descritivo,preco_custo,preco_venda,marca,modelo,unidade,estoque_total,estoque_minimo,origem,NCM,CEST);
 
         ProdutoDao produtoDao = new ProdutoDao();
-        produtoDao.createProduto(produtos);
-        System.out.println(nomeProduto);
 
-        request.getRequestDispatcher("cadastroProduto.html").forward(request, response);
-//        super.doPost(request, response);
+        if(codigo_produto.isBlank()){
+            produtoDao.createProduto(produtos);
+        } else {
+            produtoDao.updateProduto(produtos);
+        }
+
+        resp.sendRedirect("/find-all-produtos");
+
     }
 }
