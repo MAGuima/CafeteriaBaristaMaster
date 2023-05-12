@@ -14,8 +14,8 @@ import java.util.Collections;
 import java.util.List;
 public class ProdutoDao {
     public void createProduto(Produtos produtos) {
-        
-        String SQL = "INSERT INTO PRODUTOS (nome_produto,categoria_produto,subcategoria_produto,descritivo,preco_custo,preco_venda,marca,modelo,unidade,estoque_total,estoque_minimo,origem,NCM,CEST) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                                                                                                               //1,2,3,4,5
+        String SQL = "INSERT INTO PRODUTOS (nome_produto,categoria_produto,preco_venda,image,descritivo) VALUES (?,?,?,?,?)";
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -24,20 +24,12 @@ public class ProdutoDao {
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-            preparedStatement.setString(1, produtos.getNome_produto());
-            preparedStatement.setString(2, produtos.getCategoria_produto());
-            preparedStatement.setString(3, produtos.getSubcategoria_produto());
-            preparedStatement.setString(4, produtos.getDescritivo());
-            preparedStatement.setDouble(5, produtos.getPreco_custo());
-            preparedStatement.setDouble(6, produtos.getPreco_venda());
-            preparedStatement.setString(7, produtos.getMarca());
-            preparedStatement.setString(8, produtos.getModelo());
-            preparedStatement.setString(9, produtos.getUnidade());
-            preparedStatement.setInt(10, produtos.getEstoque_total());
-            preparedStatement.setInt(11, produtos.getEstoque_minimo());
-            preparedStatement.setString(12, produtos.getOrigem());
-            preparedStatement.setString(13, produtos.getNCM());
-            preparedStatement.setString(14, produtos.getCEST());
+            preparedStatement.setString(1, produtos.getNome_produto());//1
+            preparedStatement.setString(2, produtos.getCategoria_produto());//2
+            preparedStatement.setDouble(3, produtos.getPreco_venda());//3
+            preparedStatement.setString(4, produtos.getImage()); //4
+            preparedStatement.setString(5, produtos.getDescritivo());//5
+
 
 
             preparedStatement.executeUpdate();
@@ -70,25 +62,14 @@ public class ProdutoDao {
             List<Produtos> produtos = new ArrayList<>();
 
             while (resultSet.next()) {
-                String codigo_produto = resultSet.getString("codigo_produto");
-                String nome_produto = resultSet.getString("nome_produto");
-                String categoria_produto = resultSet.getString("categoria_produto");
-                String subcategoria_produto = resultSet.getString("subcategoria_produto");
-                String descritivo = resultSet.getString("descritivo");
-                //String precoCustoString = resultSet.getString("precoCustoString");
-                double preco_custo = resultSet.getDouble("preco_custo");
-                double preco_venda = resultSet.getDouble("preco_venda");
-                String marca = resultSet.getString("marca");
-                String modelo = resultSet.getString("modelo");
-                String unidade = resultSet.getString("unidade");
-                int estoque_total = resultSet.getInt("estoque_total");
-                int estoque_minimo = resultSet.getInt("estoque_minimo");
-                String origem = resultSet.getString("origem");
-                String NCM = resultSet.getString("NCM");
-                String CEST = resultSet.getString("CEST");
-                //String precoVendaString = resultSet.getString("precoVendaString");
-
-                Produtos produto = new Produtos(codigo_produto,nome_produto,categoria_produto,subcategoria_produto,descritivo,/*precoCustoString,*/preco_custo,preco_venda,marca,modelo,unidade,estoque_total,estoque_minimo,origem,NCM,CEST/*,precoVendaString*/);
+                String codigo_produto = resultSet.getString("codigo_produto"); //0
+                String nome_produto = resultSet.getString("nome_produto"); //1
+                String categoria_produto = resultSet.getString("categoria_produto"); //2
+                double preco_venda = resultSet.getDouble("preco_venda");// 3
+                String image = resultSet.getString("image");//4
+                String descritivo = resultSet.getString("descritivo");//5
+                //public Produtos(String        codigo_produto,nome_produto,categoria_produto,descritivo,preco_venda,image)
+                Produtos produto = new Produtos(codigo_produto,nome_produto,categoria_produto,preco_venda,image,descritivo);
 
                 produtos.add(produto);
 

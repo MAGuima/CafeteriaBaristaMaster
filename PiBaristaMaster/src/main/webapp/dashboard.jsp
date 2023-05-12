@@ -11,20 +11,11 @@
     <table>
         <tr>
             <th>codigo_produto</th>
-            <th>categoria_produto</th>
-            <th>subcategoria_produto</th>
             <th>nome_produto</th>
-            <th>descritivo</th>
-            <th>preco_custo</th>
+            <th>categoria_produto</th>
             <th>preco_venda</th>
-            <th>marca</th>
-            <th>modelo</th>
-            <th>unidade</th>
-            <th>estoque_total</th>
-            <th>estoque_minimo</th>
-            <th>origem</th>
-            <th>NCM</th>
-            <th>CEST</th>
+            <th>image</th>
+            <th>descritivo</th>
            <th>Actions</th>
         </tr>
 
@@ -33,20 +24,12 @@
         <tr>
 
                         <td>${produtos.codigo_produto}</td>
-                        <td>${produtos.categoria_produto}</td>
-                        <td>${produtos.subcategoria_produto}</td>
                         <td>${produtos.nome_produto}</td>
-                        <td>${produtos.descritivo}</td>
-                        <td>${produtos.preco_custo}</td>
+                        <td>${produtos.categoria_produto}</td>
                         <td>${produtos.preco_venda}</td>
-                        <td>${produtos.marca}</td>
-                        <td>${produtos.modelo}</td>
-                        <td>${produtos.unidade}</td>
-                        <td>${produtos.estoque_total}</td>
-                        <td>${produtos.estoque_minimo}</td>
-                        <td>${produtos.origem}</td>
-                        <td>${produtos.NCM}</td>
-                        <td>${produtos.CEST}</td>
+                        <td>${produtos.image}</td>
+                        <td>${produtos.descritivo}</td>
+
                         <td>
                             <form action="/delete-produto" method="post">
                               <input type="hidden" codigo_produto="codigo_produto" name="codigo_produto" value="${produtos.codigo_produto}">

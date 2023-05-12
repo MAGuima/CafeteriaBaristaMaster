@@ -27,6 +27,15 @@
             </li>
 
             <li>
+                            <div>
+                                <label>Nome do Produto:</label>
+                                <div>
+                                    <input type="text" name="nome_produto" id="nome_produto">
+                                </div>
+                            </div>
+                        </li>
+
+            <li>
                 <div>
                     <label>Categoria:</label>
                     <div>
@@ -36,22 +45,21 @@
             </li>
 
             <li>
-                <div>
-                    <label>Subcategoria:</label>
-                    <div>
-                        <input type="text" name="subcategoria_produto" id="subcategoria_produto">
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div>
-                    <label>Nome do Produto:</label>
-                    <div>
-                        <input type="text" name="nome_produto" id="nome_produto">
-                    </div>
-                </div>
-            </li>
+                            <div>
+                                <label>Preço de venda:</label>
+                                <div>
+                                    <input type="text" name="preco_venda" id="preco_venda">
+                                </div>
+                            </div>
+                        </li>
+             <li>
+                             <div>
+                                 <label>image:</label>
+                                 <div>
+                                     <input type="text" name="image" id="image">
+                                 </div>
+                             </div>
+                         </li>
 
             <li>
                 <div>
@@ -62,59 +70,6 @@
                 </div>
             </li>
 
-            <li>
-                <div>
-                    <label>Preço de custo:</label>
-                    <div>
-                        <input type="text" name="preco_custo" id="preco_custo">
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div>
-                    <label>Preço de venda:</label>
-                    <div>
-                        <input type="text" name="preco_venda" id="preco_venda">
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div>
-                    <label>Marca:</label>
-                    <div>
-                        <input type="text" name="marca" id="marca">
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div>
-                    <label>Modelo:</label>
-                    <div>
-                        <input type="text" name="modelo" id="modelo">
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div>
-                    <label>Unidade:</label>
-                    <div>
-                        <input type="text" name="unidade" id="unidade">
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div>
-                    <label>Produto ativo:</label>
-                    <div>
-                        <input type="text" name="Produto_ativo" id="Produto_ativo">
-                    </div>
-                </div>
-            </li>
         </div>
         <div class="containerBotoes"> <!-- FALTA configurar corretamente o codigo dos botoes -->
             <button class="btIncluir" type="submit">Incluir</button>

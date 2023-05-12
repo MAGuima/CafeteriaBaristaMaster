@@ -1,17 +1,8 @@
 CREATE TABLE PRODUTOS (
 	codigo_produto INT PRIMARY KEY AUTO_INCREMENT,
-	categoria_produto VARCHAR(30),
-	subcategoria_produto VARCHAR(30),
 	nome_produto VARCHAR(50),
-	descritivo VARCHAR(200),
-	preco_custo DECIMAL(10,2),
+	categoria_produto VARCHAR(30),
 	preco_venda DECIMAL(10,2),
-	marca VARCHAR(30),
- 	modelo VARCHAR(30),
-	unidade VARCHAR(10),
-	estoque_total INT,
-	estoque_minimo INT,
-	origem VARCHAR(50),
-	NCM VARCHAR(10),
-	CEST VARCHAR(10)
+	image VARCHAR(255),
+	descritivo VARCHAR(200),
 );

@@ -15,26 +15,13 @@ public class CreateProdutoServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
-        String codigo_produto = request.getParameter("codigo_produto");
-        String nomeProduto = request.getParameter("nome_produto");
-        String categoria_produto = request.getParameter("categoria_produto");
-        String subcategoria_produto = request.getParameter("subcategoria_produto");
-        String descritivo = request.getParameter("descritivo");
-        double preco_custo = Double.parseDouble(request.getParameter("preco_custo"));
-        double preco_venda = Double.parseDouble(request.getParameter("preco_venda"));
-        String marca = request.getParameter("marca");
-        String modelo = request.getParameter("modelo");
-        String unidade = request.getParameter("unidade");
-        boolean produto_ativo = Boolean.parseBoolean(request.getParameter("produto_ativo"));
-        String estoqueTotalParam = request.getParameter("estoque_total");
-        int estoque_total = estoqueTotalParam != null ? Integer.parseInt(estoqueTotalParam) : 0;
-        String estoqueMinimoParam = request.getParameter("estoque_minimo");
-        int estoque_minimo = estoqueMinimoParam != null ? Integer.parseInt(estoqueMinimoParam) : 0;
-        String origem = request.getParameter("origem");
-        String NCM = request.getParameter("NCM");
-        String CEST = request.getParameter("CEST");
-
-        Produtos produtos = new Produtos(codigo_produto,nomeProduto,categoria_produto,subcategoria_produto,descritivo,preco_custo,preco_venda,marca,modelo,unidade,estoque_total,estoque_minimo,origem,NCM,CEST);
+        String codigo_produto = request.getParameter("codigo_produto"); //0
+        String nomeProduto = request.getParameter("nome_produto"); //1
+        String descritivo = request.getParameter("descritivo"); //2 descritivo
+        double preco_venda = Double.parseDouble(request.getParameter("preco_venda"));//3
+        String image = request.getParameter("image");// 4 - image
+        String categoria_produto = request.getParameter("categoria_produto");//5
+        Produtos produtos = new Produtos(codigo_produto,nomeProduto,descritivo,preco_venda,image,categoria_produto);
 
         ProdutoDao produtoDao = new ProdutoDao();
 
