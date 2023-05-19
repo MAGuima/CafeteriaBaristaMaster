@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/find-all-produtos")
-public class ListProdutoServlet extends HttpServlet {
+@WebServlet("/menu")
+public class MenuServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -19,7 +19,7 @@ public class ListProdutoServlet extends HttpServlet {
 
         req.setAttribute("produtos",produtos);
 
-        req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
+        req.getRequestDispatcher("menu.jsp").forward(req, resp);
     }
 
 }

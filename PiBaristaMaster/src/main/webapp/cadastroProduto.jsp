@@ -4,6 +4,7 @@
 <head>
     <link href="css/cadastroProduto.css" rel="stylesheet"/>
     <meta charset="UTF-8">
+    <%@ page contentType="text/html; charset=UTF-8" %>
     <link rel="shortcut icon" href="./imagens/img_icon/favicon.png" type="image/x-icon">
     <title>Cadastro de Produtos</title>
 </head>
@@ -14,44 +15,56 @@
     <h1>Cadastro de Produtos</h1>
 </div>
 
-<form action="/create-produto" method="post">
+<form action="/create-produto" method="post" enctype="multipart/form-data">
     <div class="tela">
         <div class="containerCadastro"> <!-- contém os campos de cadastro dos dados do usuario -->
+
+
             <li>
-                <div>
-                    <label>Codigo:</label> <!-- nome do campo -->
-                    <div>
-                        <input type="text" name="codigo_produto" id="codigo_produto" value="${param.id}"> <!-- "input" para que o usuario possa escrever o valor do campo -->
-                    </div>
-                </div>
-            </li>
+                            <div>
+                                <label>Nome do Produto:</label>
+                                <div>
+                                    <input type="text" name="nome_produto" id="nome_produto">
+                                </div>
+                            </div>
+                        </li>
 
             <li>
                 <div>
                     <label>Categoria:</label>
                     <div>
-                        <input type="text" name="categoria_produto" id="categoria_produto" value="${param.name}">
+
+                        <select name="categoria_produto" id="categoria_produto">
+                        <option value="cafe">Cafes </option>
+                        <option value="boloArtesanais">Bolos Artesanais </option>
+                        <option value="sobremesa">Sobremesa </option>
+                        <option value="lanche">Lanche </option>
+                        </select>
+
                     </div>
                 </div>
             </li>
 
             <li>
-                <div>
-                    <label>Subcategoria:</label>
-                    <div>
-                        <input type="text" name="subcategoria_produto" id="subcategoria_produto">
-                    </div>
-                </div>
-            </li>
+                            <div>
+                                <label>Preço de venda:</label>
+                                <div>
+                                    <input type="text" name="preco_venda" id="preco_venda">
+                                </div>
+                            </div>
+                        </li>
+             <li>
+                             <div>
+                                 <label>image:</label>
+                                 <div>
 
-            <li>
-                <div>
-                    <label>Nome do Produto:</label>
-                    <div>
-                        <input type="text" name="nome_produto" id="nome_produto">
-                    </div>
-                </div>
-            </li>
+                                 </div>
+                                 <div>
+                                         <label for="file">Choose file</label>
+                                         <input type="file" name="file" id="file">
+                                     </div>
+                             </div>
+                         </li>
 
             <li>
                 <div>
@@ -62,59 +75,6 @@
                 </div>
             </li>
 
-            <li>
-                <div>
-                    <label>Preço de custo:</label>
-                    <div>
-                        <input type="text" name="preco_custo" id="preco_custo">
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div>
-                    <label>Preço de venda:</label>
-                    <div>
-                        <input type="text" name="preco_venda" id="preco_venda">
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div>
-                    <label>Marca:</label>
-                    <div>
-                        <input type="text" name="marca" id="marca">
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div>
-                    <label>Modelo:</label>
-                    <div>
-                        <input type="text" name="modelo" id="modelo">
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div>
-                    <label>Unidade:</label>
-                    <div>
-                        <input type="text" name="unidade" id="unidade">
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div>
-                    <label>Produto ativo:</label>
-                    <div>
-                        <input type="text" name="Produto_ativo" id="Produto_ativo">
-                    </div>
-                </div>
-            </li>
         </div>
         <div class="containerBotoes"> <!-- FALTA configurar corretamente o codigo dos botoes -->
             <button class="btIncluir" type="submit">Incluir</button>

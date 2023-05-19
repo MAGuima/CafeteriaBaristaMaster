@@ -1,21 +1,15 @@
 package br.com.siteBaristaMaster.dao;
 
-import br.com.siteBaristaMaster.model.Produtos;
+import br.com.siteBaristaMaster.model.Produto;
 
 import java.sql.*;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 public class ProdutoDao {
-    public void createProduto(Produtos produtos) {
-        
-        String SQL = "INSERT INTO PRODUTOS (nome_produto,categoria_produto,subcategoria_produto,descritivo,preco_custo,preco_venda,marca,modelo,unidade,estoque_total,estoque_minimo,origem,NCM,CEST) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    public void createProduto(Produto produto) {
+                                                                                                               //1,2,3,4,5
+        String SQL = "INSERT INTO PRODUTOS (nome_produto,categoria_produto,preco_venda,image,descritivo) VALUES (?,?,?,?,?)";
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -24,20 +18,12 @@ public class ProdutoDao {
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-            preparedStatement.setString(1, produtos.getNome_produto());
-            preparedStatement.setString(2, produtos.getCategoria_produto());
-            preparedStatement.setString(3, produtos.getSubcategoria_produto());
-            preparedStatement.setString(4, produtos.getDescritivo());
-            preparedStatement.setDouble(5, produtos.getPreco_custo());
-            preparedStatement.setDouble(6, produtos.getPreco_venda());
-            preparedStatement.setString(7, produtos.getMarca());
-            preparedStatement.setString(8, produtos.getModelo());
-            preparedStatement.setString(9, produtos.getUnidade());
-            preparedStatement.setInt(10, produtos.getEstoque_total());
-            preparedStatement.setInt(11, produtos.getEstoque_minimo());
-            preparedStatement.setString(12, produtos.getOrigem());
-            preparedStatement.setString(13, produtos.getNCM());
-            preparedStatement.setString(14, produtos.getCEST());
+            preparedStatement.setString(1, produto.getNomeProduto());//1
+            preparedStatement.setString(2, produto.getCategoriaProduto());//2
+            preparedStatement.setDouble(3, produto.getPrecoVenda());//3
+            preparedStatement.setString(4, produto.getImage()); //4
+            preparedStatement.setString(5, produto.getDescritivo());//5
+
 
 
             preparedStatement.executeUpdate();
@@ -53,7 +39,7 @@ public class ProdutoDao {
         }
 
     }
-    public List<Produtos> findAllProdutos() {
+    public List<Produto> findAllProdutos() {
 
         String SQL = "SELECT * FROM PRODUTOS";
 
@@ -67,28 +53,17 @@ public class ProdutoDao {
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            List<Produtos> produtos = new ArrayList<>();
+            List<Produto> produtos = new ArrayList<>();
 
             while (resultSet.next()) {
-                String codigo_produto = resultSet.getString("codigo_produto");
-                String nome_produto = resultSet.getString("nome_produto");
-                String categoria_produto = resultSet.getString("categoria_produto");
-                String subcategoria_produto = resultSet.getString("subcategoria_produto");
-                String descritivo = resultSet.getString("descritivo");
-                //String precoCustoString = resultSet.getString("precoCustoString");
-                double preco_custo = resultSet.getDouble("preco_custo");
-                double preco_venda = resultSet.getDouble("preco_venda");
-                String marca = resultSet.getString("marca");
-                String modelo = resultSet.getString("modelo");
-                String unidade = resultSet.getString("unidade");
-                int estoque_total = resultSet.getInt("estoque_total");
-                int estoque_minimo = resultSet.getInt("estoque_minimo");
-                String origem = resultSet.getString("origem");
-                String NCM = resultSet.getString("NCM");
-                String CEST = resultSet.getString("CEST");
-                //String precoVendaString = resultSet.getString("precoVendaString");
-
-                Produtos produto = new Produtos(codigo_produto,nome_produto,categoria_produto,subcategoria_produto,descritivo,/*precoCustoString,*/preco_custo,preco_venda,marca,modelo,unidade,estoque_total,estoque_minimo,origem,NCM,CEST/*,precoVendaString*/);
+                String codigo_produto = resultSet.getString("codigo_produto"); //0
+                String nome_produto = resultSet.getString("nome_produto"); //1
+                String categoria_produto = resultSet.getString("categoria_produto"); //2
+                double preco_venda = resultSet.getDouble("preco_venda");// 3
+                String image = resultSet.getString("image");//4
+                String descritivo = resultSet.getString("descritivo");//5
+                //public Produtos(String        codigo_produto,nome_produto,categoria_produto,descritivo,preco_venda,image)
+                Produto produto = new Produto(codigo_produto,nome_produto,categoria_produto,preco_venda,image,descritivo);
 
                 produtos.add(produto);
 
@@ -135,9 +110,10 @@ public class ProdutoDao {
 
     }
 
-    public void updateProduto(Produtos produtos){
+    public void updateProduto(Produto produto){
 
-        String SQL = "UPDATE PRODUTOS SET NOME_PRODUTO = ? WHERE CODIGO_PRODUTO = ?";
+        String SQL = "UPDATE PRODUTOS SET NOME_PRODUTO = ?, CATEGORIA_PRODUTO = ?, PRECO_VENDA = ?, IMAGE = ?, Descritivo = ? WHERE CODIGO_PRODUTO = ?";
+
         try{
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
 
@@ -145,22 +121,15 @@ public class ProdutoDao {
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-            preparedStatement.setString(1, produtos.getNome_produto());
-            preparedStatement.setString(2,produtos.getCodigo_produto());
+            preparedStatement.setString(1, produto.getNomeProduto());//1
+            preparedStatement.setString(2, produto.getCategoriaProduto());//2
+            preparedStatement.setDouble(3, produto.getPrecoVenda());//3
+            preparedStatement.setString(4, produto.getImage()); //4
+            preparedStatement.setString(5, produto.getDescritivo());//5
+            preparedStatement.setString(6, produto.getCodigoProduto());//0
 
-//            preparedStatement.setString(3, produtos.getCategoria_produto());
-//            preparedStatement.setString(4, produtos.getSubcategoria_produto());
-//            preparedStatement.setString(5, produtos.getDescritivo());
-//            preparedStatement.setDouble(6, produtos.getPreco_custo());
-//            preparedStatement.setDouble(7, produtos.getPreco_venda());
-//            preparedStatement.setString(8, produtos.getMarca());
-//            preparedStatement.setString(9, produtos.getModelo());
-//            preparedStatement.setString(10, produtos.getUnidade());
-//            preparedStatement.setInt(11, produtos.getEstoque_total());
-//            preparedStatement.setInt(12, produtos.getEstoque_minimo());
-//            preparedStatement.setString(13, produtos.getOrigem());
-//            preparedStatement.setString(14, produtos.getNCM());
-//            preparedStatement.setString(15, produtos.getCEST());
+//
+//            preparedStatement.setString(5, produtos.getDescritivo());//5
             preparedStatement.execute();
 
             System.out.println("Sucess in update produto");
@@ -169,7 +138,7 @@ public class ProdutoDao {
 
 
         }catch (Exception e){
-            System.out.println("Fail in database connection");
+            System.out.println("Fail in database connection uppdate produto");
             System.out.println("Error + " + e.getMessage());
         }
 
