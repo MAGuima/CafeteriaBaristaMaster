@@ -4,5 +4,5 @@ CREATE TABLE PRODUTOS (
 	categoria_produto VARCHAR(30),
 	preco_venda DECIMAL(10,2),
 	image VARCHAR(255),
-	descritivo VARCHAR(200),
+	descritivo VARCHAR(200)
 );

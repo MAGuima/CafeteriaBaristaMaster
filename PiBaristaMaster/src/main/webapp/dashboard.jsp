@@ -23,30 +23,27 @@
 
         <tr>
 
-                        <td>${produtos.codigo_produto}</td>
-                        <td>${produtos.nome_produto}</td>
-                        <td>${produtos.categoria_produto}</td>
-                        <td>${produtos.preco_venda}</td>
+                        <td>${produtos.codigoProduto}</td>
+                        <td>${produtos.nomeProduto}</td>
+                        <td>${produtos.categoriaProduto}</td>
+                        <td>${produtos.precoVenda}</td>
                         <td>${produtos.image}</td>
                         <td>${produtos.descritivo}</td>
-
+                        <td>
+                            <a href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${produtos.image}">
+                              <img style="width: 100px" src="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${produtos.image}" alt="...">
+                            </a>
+                        </td>
                         <td>
                             <form action="/delete-produto" method="post">
-                              <input type="hidden" codigo_produto="codigo_produto" name="codigo_produto" value="${produtos.codigo_produto}">
+                              <input type="hidden" codigo_produto="codigoProduto" name="codigoProduto" value="${produtos.codigoProduto}">
                               <button type="submit">Delete</button>
                               <span> | </span>
-                              <a href="cadastroProduto.jsp?id=${produtos.codigo_produto}&name=${produtos.nome_produto}">Update</a>
-
-
-                            </form>
-
-                            <form action="/create-produto" method="post">
-                                <label>Nome produto</label>
-                                <input type="text" name="nome_produto" id="nome_produto" value="${param.nome_produto}">
-                                <input type="hidden" id="codigo_produto" name="codigo_produto" value="${param.codigo_produto}">
-                                <button type="submit">Save</button>
+                              <a href="cadastroProduto.jsp?id=${produtos.codigoProduto}&name=${produtos.nomeProduto}">Update</a>
 
                             </form>
+
+
                         </td>
         </tr>
         </c:forEach>

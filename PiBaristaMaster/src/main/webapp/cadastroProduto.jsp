@@ -4,6 +4,7 @@
 <head>
     <link href="css/cadastroProduto.css" rel="stylesheet"/>
     <meta charset="UTF-8">
+    <%@ page contentType="text/html; charset=UTF-8" %>
     <link rel="shortcut icon" href="./imagens/img_icon/favicon.png" type="image/x-icon">
     <title>Cadastro de Produtos</title>
 </head>
@@ -14,7 +15,7 @@
     <h1>Cadastro de Produtos</h1>
 </div>
 
-<form action="/create-produto" method="post">
+<form action="/create-produto" method="post" enctype="multipart/form-data">
     <div class="tela">
         <div class="containerCadastro"> <!-- contém os campos de cadastro dos dados do usuario -->
             <li>
@@ -58,6 +59,10 @@
                                  <div>
                                      <input type="text" name="image" id="image">
                                  </div>
+                                 <div>
+                                         <label for="file">Choose file</label>
+                                         <input type="file" name="file" id="file">
+                                     </div>
                              </div>
                          </li>
 
