@@ -239,7 +239,7 @@ border: solid; border-width: 2px; border-color: red;
 
 /* CONFIGURAÇÕES TELA CURSOS */
 
-.containerCursos {
+.ontainerCursos {
     border: solid; border-width: 2px; border-color: red;
     display: flex;
     flex-wrap: wrap;
@@ -250,6 +250,7 @@ border: solid; border-width: 2px; border-color: red;
     width: 100vw;
     height: 100vh;
     height: 768px;
+    justify-content: center;
     margin: 0 auto;
 }
 
@@ -364,7 +365,6 @@ border: solid; border-width: 2px; border-color: red;
     background-color: #EDEDED;
     max-width: 1024px;
     height: 300px;
-    background-color: ;
     margin: 0 auto;
     justify-content: center;
     text-align: center;
