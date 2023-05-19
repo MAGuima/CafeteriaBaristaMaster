@@ -18,14 +18,7 @@
 <form action="/create-produto" method="post" enctype="multipart/form-data">
     <div class="tela">
         <div class="containerCadastro"> <!-- contém os campos de cadastro dos dados do usuario -->
-            <li>
-                <div>
-                    <label>Codigo:</label> <!-- nome do campo -->
-                    <div>
-                        <input type="text" name="codigo_produto" id="codigo_produto" value="${param.id}"> <!-- "input" para que o usuario possa escrever o valor do campo -->
-                    </div>
-                </div>
-            </li>
+
 
             <li>
                             <div>
@@ -40,7 +33,14 @@
                 <div>
                     <label>Categoria:</label>
                     <div>
-                        <input type="text" name="categoria_produto" id="categoria_produto" value="${param.name}">
+
+                        <select name="categoria_produto" id="categoria_produto">
+                        <option value="cafe">Cafes </option>
+                        <option value="boloArtesanais">Bolos Artesanais </option>
+                        <option value="sobremesa">Sobremesa </option>
+                        <option value="lanche">Lanche </option>
+                        </select>
+
                     </div>
                 </div>
             </li>
@@ -57,7 +57,7 @@
                              <div>
                                  <label>image:</label>
                                  <div>
-                                     <input type="text" name="image" id="image">
+
                                  </div>
                                  <div>
                                          <label for="file">Choose file</label>

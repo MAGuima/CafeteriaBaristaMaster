@@ -25,11 +25,15 @@
 <section class="flexMenu">
 
     <c:forEach var="produto" items="${produtos}">
+
+        <c:if test="${produto.descritivo=='cafe'}">
         <div>
-            <img height="400" width="400" src="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${produto.image}" alt="...">
-            <h2>R$ ${produto.precoVenda}</h2>
-            <p>${produto.descritivo}</p>
-        </div>
+                    <img height="400" width="400" src="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${produto.image}" alt="...">
+                    <h2>R$ ${produto.precoVenda}</h2>
+                    <p>${produto.descritivo}</p>
+                </div>
+                </c:if>
+
     </c:forEach>
 
     </div>
@@ -39,99 +43,51 @@
     <h1>BOLOS ARTESANAIS</h1>
 </div>
 <section class="flexMenu">
+<c:forEach var="produto" items="${produtos}">
 
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
+        <c:if test="${produto.descritivo=='boloArtesanais'}">
+        <div>
+                    <img height="400" width="400" src="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${produto.image}" alt="...">
+                    <h2>R$ ${produto.precoVenda}</h2>
+                    <p>${produto.descritivo}</p>
+                </div>
+                </c:if>
+
+    </c:forEach>
 </section>
 <div class="tituloMenu">
     <img src="img/img_icon/icon_cake1.svg" height="200" width="200"/>
     <h1>SOBREMESAS</h1>
 </div>
 <section class="flexMenu">
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
+<c:forEach var="produto" items="${produtos}">
+
+        <c:if test="${produto.descritivo=='sobremesa'}">
+        <div>
+                    <img height="400" width="400" src="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${produto.image}" alt="...">
+                    <h2>R$ ${produto.precoVenda}</h2>
+                    <p>${produto.descritivo}</p>
+                </div>
+                </c:if>
+
+    </c:forEach>
 </section>
 <div class="tituloMenu">
     <img src="img/img_icon/icon_lanche1.svg" height="200" width="200"/>
     <h1>LANCHES</h1>
 </div>
 <section class="flexMenu">
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
-    <div>
-        <img src="img/imgTeste.jpg" height="300" width="300"/>
-        <h2>R$ 0,00</h2>
-        <p>Digite aqui o descritivo da imagem</p>
-    </div>
+<c:forEach var="produto" items="${produtos}">
+
+        <c:if test="${produto.descritivo=='lanche'}">
+        <div>
+                    <img height="400" width="400" src="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${produto.image}" alt="...">
+                    <h2>R$ ${produto.precoVenda}</h2>
+                    <p>${produto.descritivo}</p>
+                </div>
+                </c:if>
+
+    </c:forEach>
 </section>
 </body>
 </html>
