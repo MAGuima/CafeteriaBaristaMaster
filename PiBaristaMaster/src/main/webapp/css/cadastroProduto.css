@@ -2,16 +2,16 @@ body {
     color: black;
     font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     border: solid; border-width: 3px; border-color: grey;
-    margin: auto;
-    max-width: 1920px;
-    max-height: 1080px;
-    min-width: 500px;
+    margin: 0 auto;
+    max-width: 1024px;
+    max-height: 768px;
+    min-width: 400px;
 }
 
 .containerHead {
-    max-width: 1920px;
-    max-height: 1080px;
-    min-width: 500px;
+    max-width: 1024px;
+    max-height: 768px;
+    min-width: 400px;
     background-image: url(../imagens/background_cadastro.jpg);
     background-size: 100%;
     width: 100vw;
@@ -20,7 +20,7 @@ body {
 
 .tela {
     background-color: #EDEDED;
-    padding: 20px;
+    padding: 10px;
 }
 
 h1 {
@@ -39,8 +39,8 @@ h1 {
     align-content: space-around;
     justify-content: flex-start;
     float: left;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding-bottom: 40px;
+    padding-top: 40px;
     margin: 0px;
 }
 
@@ -68,7 +68,7 @@ button:hover {
     border-radius: 30px;
     margin: 5px;
     padding: 10px;
-    width: 120px;
+    width: 100px;
     color: white;
     font-size: 14px;
     text-align: center;

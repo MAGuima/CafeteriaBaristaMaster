@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     color: black;
-    background-color: grey;
+    background: linear-gradient(to bottom, #B6BCBD 40%, grey 100%);
 }
 
 a {
@@ -53,15 +53,17 @@ p {
 
 .containerPrincipal {
     display: flex;
-    background-image: url(../imagens/Background_Principal.jpg);
+    background-image: url(../img/Background_Cimento.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
     max-width: 1024px;
+    width: 1024px;
     max-height: 768px;
+    height: 768px;
     min-width: 400px;
     width: 100vw;
     height: 100vh;
     justify-content: center;
+    align-content: center;
     margin: 0 auto;
 }
 
@@ -95,25 +97,58 @@ a:hover {
     transition: 1s;
 }
 
-.containerLogo {
-    margin: auto;
-}
-
 .logotipo {
+    align-self: center;
     padding: 20px;
-    max-width: 250px;
-    max-height: 250px;
+    width: 250px;
+    height: 250px;
     min-width: 150px;
+    margin: 0px;
 }
 
-.logoPrincipal{
-    align-self: center;
+.bule {
+    position: absolute;
+    width: 220px;
+    height: 258px;
+    min-width: 100px;
+    margin: 0 auto;
+}
+
+.xicara1 {
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    position: absolute;
+    padding: 0px 50px 0px 0px;
+
+    max-width: 172px;
+    max-height: 190px;
+    min-width: 100px;
+    max-width: 1024px;
+    width: 1024px;
+    max-height: 768px;
+    height: 768px;
+}
+
+.moedor {
+    align-self: flex-end;
+    justify-content: flex-end;
+    position: absolute;
+    max-width: 317px;
+    max-height: 302px;
+    min-width: 100px;
+}
+
+.arabica {
+    position: absolute;
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 100px;
 }
 
 /* CONFIGURAÇÕES TELA QUEM SOMOS */
 
 .containerQuemSomos {
-    border: solid; border-width: 2px; border-color: orange;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -132,7 +167,6 @@ a:hover {
 }
 
 .cxtexto {
-    border: solid; border-width: 2px; border-color: green;
     display: flex;
     align-items: stretch;
     width: 1024px;
@@ -140,15 +174,14 @@ a:hover {
 }
 
 .cxt1 {
-border: solid; border-width: 2px; border-color: blue;
+    flex-grow: 1;
     background: #EDEDED;
-    max-width: 50%;
+    min-width: 40%;
 }
 
 .cxt2 {
-border: solid; border-width: 2px; border-color: red;
+    flex-grow: 1;
     background: #50897D;
-    max-width: 50%;
 }
 
 .contImgLoja {
@@ -157,16 +190,16 @@ border: solid; border-width: 2px; border-color: red;
     position: absolute;
     width: 100vw;
     max-width: 1024px;
-    max-height: 768px;
+    gap: 20px;
 }
 
 .contImgLoja img {
-    max-width: 200px;
-    max-height: 200px;
-    min-width: 100px;
+    max-width: 300px;
+    max-height: 300px;
+    min-width: 120px;
     height: 100%;
     width: 100%;
-    padding: 20px 20px 0px 20px;
+    padding: 10px 10px 0px 10px;
 }
 
 .telaQuemSomos p {
@@ -180,8 +213,8 @@ border: solid; border-width: 2px; border-color: red;
 /* CONFIGURAÇÕES TELA EVENTOS */
 
 .containerEventos {
-    border: solid; border-width: 1px; border-color: yellow;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     max-width: 1024px;
     max-height: 768px;
@@ -194,39 +227,38 @@ border: solid; border-width: 2px; border-color: red;
     background-color: #EDEDED;
 }
 
-.contImgEventos {
-    border: solid; border-width: 2px; border-color: red;
+.containerEventos2 {
+    width: 1024px;
+    max-width: 1024px;
+    height: 508px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     align-items: flex-end;
 }
 
-.imgEventos {
-    border: solid; border-width: 2px; border-color: green;
-    align-self: flex-end;
-    width: 100%;
-    height: auto;
-    min-width: 200px;
-    min-height: auto;
+.contImgEventos {
+    flex-grow: 1;
+    width: 50%;
     padding: 0px;
 }
 
-.contTxtEventos {
-    display: flex;
-    flex-wrap: wrap;
-    width: 982px;
+.imgEventos {
+    width: 100%;
 }
 
 .cxt1_eventos {
-    width: 480px;
+    width: 1024px;
     height: 260px;
-    background: #EDEDED;
+    background: rgba(237, 237, 237, 1);
     margin: 0 auto;
 }
 
 .cxt2_eventos {
     background-color: white;
-    height: 508px;
+    flex-grow: 1;
+    width: 50%;
+    height: 100%;
+    padding: 0px;
 }
 
 .containerEventos p {
@@ -239,8 +271,8 @@ border: solid; border-width: 2px; border-color: red;
 
 /* CONFIGURAÇÕES TELA CURSOS */
 
-.ontainerCursos {
-    border: solid; border-width: 2px; border-color: red;
+.containerCursos {
+    border: solid; border-width: 2px; border-color: purple;
     display: flex;
     flex-wrap: wrap;
     max-width: 1024px;
@@ -250,12 +282,10 @@ border: solid; border-width: 2px; border-color: red;
     width: 100vw;
     height: 100vh;
     height: 768px;
-    justify-content: center;
     margin: 0 auto;
 }
 
 .contTxtCursos {
-    border: solid; border-width: 2px; border-color: yellow;
     width: 1024px;
     height: 260px;
     background: #EDEDED;
@@ -263,33 +293,30 @@ border: solid; border-width: 2px; border-color: red;
 }
 
 .contImgCursos {
-    border: solid; border-width: 2px; border-color: yellow;
+    border: solid; border-width: 2px; border-color: purple;
     background: #F5F5F5;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     width: 1024px;
-    height: auto;
     min-width: 400px;
 }
 
 .imgIcon {
     border: solid; border-width: 2px; border-color: blue;
-    align-self: center;
-    margin: 0px 10px;
+    order: 0;
 }
 
 .imgEspresso {
-    border: solid; border-width: 2px; border-color: blue;
-    align-self: flex-end;
-    height: auto;
+    border: solid; border-width: 2px; border-color: yellow;
     min-height: auto;
+    order: 1;
 }
 
 .imgBarista {
-    border: solid; border-width: 2px; border-color: blue;
-    align-self: flex-end;
-    height: auto;
+    border: solid; border-width: 2px; border-color: red;
     min-height: auto;
+    order: 2;
 }
 
 /* CONFIGURAÇÕES TELA MENU */
@@ -343,7 +370,6 @@ border: solid; border-width: 2px; border-color: red;
 }
 
 .contImgMenu div {
-    border: solid; border-width: 2px; border-color: red;
     background-color: #F5F5F5;
     max-width: 200px;
     max-height: 210px;
@@ -365,6 +391,7 @@ border: solid; border-width: 2px; border-color: red;
     background-color: #EDEDED;
     max-width: 1024px;
     height: 300px;
+    background-color: ;
     margin: 0 auto;
     justify-content: center;
     text-align: center;

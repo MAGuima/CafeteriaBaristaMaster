@@ -1,68 +1,16 @@
-
-/* CONFIGURAÇÕES DO MENU SUPERIOR  */
-
-.menuSuperior {
-    max-width: 1024px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow: hidden;
-    position: fixed;
-    margin-top: 10px;
-    width: 100%;
-    filter: drop-shadow(10px 10px 3px rgba( 0 0 0 / 50%));
-}
-
-.menuSuperior div:hover {
-    background-color: rgba(28, 116, 98, 1);
-    box-shadow: inset 3px 2px 8px white;
-    transition: 0.3s;
-}
-
-.menuSuperior div {
-    background-color: rgba(237, 237, 237, 1);
-    border-radius: 5px;
-    margin: 10px;
-    padding: 5px;
-}
-
-a:hover {
-    color: white;
-    transition: 1s;
-}
-
-/* Area: Container na index-Curso */
-.ContainerCursos { 
+.containerCursos { /* Area: Container na index-Curso */
     border: solid; border-width: 1px; border-color: green;
+    background: #F5F5F5;
     display: flex;
     flex-wrap: wrap;
-    background-image: url(../imagens/tela_cursos.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
     max-width: 1024px;
-    max-height: 1024px;
+    max-height: 768px;
     min-width: 400px;
     width: 1024px;
     height: 768px;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
     margin: 0 auto;
 }
 
-.ContainerCursosBarista{
- color: #EDEDED;
- font-size: 38px;
- font-style: normal;
- font-weight: 700;
- margin-top: 150px;
- text-align: left;
- line-height: 42px;
- 
-}
-.ContainerCursosBarista h2{
- color: #EDEDED;
-}
 .contTxtCursos {
     width: 1024px;
     height: 260px;
@@ -98,12 +46,12 @@ a:hover {
     min-height: auto;
 }
 
-.ContainerCursosBarista h1 {
-    color: #EDEDED;
+.contTxtCursos h1 {
+    color: black;
     font-size: 38px;
     font-style: normal;
     font-weight: 700;
-    padding: 40px 20px 0px 40px;
+    padding: 40px 20px 0px 40px;x;
  }
 
  .contTxtCursos h2 {
@@ -112,52 +60,3 @@ a:hover {
     font-size: 20px;
     padding: 20px 20px 20px 40px;
   }
-  
- .ContainerLogo{
-    align-self: auto;
-    margin: 0px 10px;   
-}
-
- .ContainerPalagrafo{
-  background-color: #50897D;
-    max-width: 1024px;
-    max-height: 768px;
-    min-width: 400px;
-    width: 1024px;
-    height: 305px;
-    width: 100vw;
-    height: 29vh;
-   margin: 0 auto;
-  }
-  .ConteinerDescritivoCurso{
-    background-color: #EDEDED;
-    max-width: 1024px;
-    max-height: 768px;
-    min-width: 400px;
-    width: 1024px;
-    height: 250px;
-    width: 100vw;
-    height: 500vh;
-    justify-content: center;
-    margin: 0 auto;
-    
-  }
-.CText h1{
- font-size: 38px;   
-}
-  /* CONFIGURAÇÕES TELA CONTATO */
-
-.ContainerContato {
-    color: black;
-    background-color:#414141;
-    max-width: 1024px;
-    height: 300px;
-    margin: 0 auto;
-    justify-content: center;
-    text-align: center;
-    padding-button: 50px;
-}
-
-.ContainerContato h2 {
-    padding: 0px;
-}

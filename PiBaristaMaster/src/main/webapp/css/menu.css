@@ -1,11 +1,22 @@
+/* CONFIGURAÇÕES GERAIS MENU */
+
+* {
+    /*border: solid; border-width: 1px; border-color: red;*/
+    border: solid; border-width: 1px; border-color: grey;
+    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    box-sizing: 0px;
+    margin: 0;
+}
+
 body {
     color: black;
     background-color: rgba(217, 217, 217, 1);
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
 }
 
 .tituloMenu{
-    max-width: 1920px;
+    max-width: 1024px;
     text-align: center;
     margin: 0 auto;
     padding-top: 50px;
@@ -13,9 +24,9 @@ body {
 }
 
 h1 {
-    font-size: 32px;
+border: solid; border-width: 1px; border-color: red;
+    font-size: 38px;
     color: black;
-    text-transform: uppercase;
     font-weight: bold;
     text-align: center;
     padding: 0;
@@ -48,9 +59,12 @@ img {
 .flexMenu {
     background-color: rgba(217, 217, 217, 1);
     display: flex;
+    flex-direction: wrap;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1080px;
+    max-width: 1024px;
+    height: auto;
+    gap: 10px;
     margin: 0 auto;
 }
 

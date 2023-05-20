@@ -5,7 +5,7 @@
     <link href="css/cadastroProduto.css" rel="stylesheet"/>
     <meta charset="UTF-8">
     <%@ page contentType="text/html; charset=UTF-8" %>
-    <link rel="shortcut icon" href="./imagens/img_icon/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/img_icon/favicon.png" type="image/x-icon">
     <title>Cadastro de Produtos</title>
 </head>
 
@@ -19,6 +19,14 @@
     <div class="tela">
         <div class="containerCadastro"> <!-- contém os campos de cadastro dos dados do usuario -->
 
+            <li>
+                            <div>
+                                <label>Codigo:</label> <!-- nome do campo -->
+                                <div>
+                                    <input type="text" name="codigo_produto" id="codigo_produto" value="${param.id}"> <!-- "input" para que o usuario possa escrever o valor do campo -->
+                                </div>
+                            </div>
+                        </li>
 
             <li>
                             <div>
