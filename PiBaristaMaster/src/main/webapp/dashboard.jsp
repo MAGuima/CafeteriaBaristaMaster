@@ -39,7 +39,7 @@
                               <input type="hidden" codigo_produto="codigoProduto" name="codigoProduto" value="${produtos.codigoProduto}">
                               <button type="submit">Delete</button>
                               <span> | </span>
-                              <a href="cadastroProduto.jsp?id=${produtos.codigoProduto}&name=${produtos.nomeProduto}">Update</a>
+                              <a href="cadastroProduto.jsp?id=${produtos.codigoProduto}&name=${produtos.nomeProduto}&preco=${produtos.precoVenda}&descritivo=${produtos.descritivo}"  >Update</a>
 
                             </form>
 

@@ -1,3 +1,21 @@
+* {
+    /*border: solid; border-width: 1px; border-color: red;*/
+    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    font-style: normal;+
+    font-weight: 400;
+    box-sizing: 0px;
+    margin: 0;
+    text-decoration: none;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
 body {
     color: black;
     font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
@@ -73,4 +91,9 @@ button:hover {
     font-size: 14px;
     text-align: center;
     box-shadow: inset 8px 6px 8px rgba(73, 73, 73, 1);
+    text-decoration: none;
+}
+label {
+    width: 200px;
+    height: 200px;
 }

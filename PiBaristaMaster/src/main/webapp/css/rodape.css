@@ -1,0 +1,72 @@
+/* CONFIGURAÇÕES TELA CONTATO */
+footer {
+    background-color: #414141;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.logoHorizontal {
+    width: 254px;
+    height: 60;
+    align-self: flex-start;
+    padding: 20px;
+}
+
+.address {
+    text-align: center;
+    font-size: 14px;
+    margin: 10px;
+    color: white;
+}
+
+.address h2 {
+    color: white;
+}
+
+.email-input {
+    height: auto;
+    padding: 5px;
+    width: 300px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 120px;
+}
+
+.submit-btn {
+    padding: 10px 25px;
+    background-color: #1C7462;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.social-link {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Estilos responsivos */
+@media screen and (min-width: 600px) {
+
+.address {
+    flex: 1;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+}
+}

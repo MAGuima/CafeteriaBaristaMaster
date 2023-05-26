@@ -19,10 +19,10 @@ public class ProdutoDao {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
             preparedStatement.setString(1, produto.getNomeProduto());//1
-            preparedStatement.setString(2, produto.getCategoriaProduto());//2
+            preparedStatement.setString(5, produto.getCategoriaProduto());//2
             preparedStatement.setDouble(3, produto.getPrecoVenda());//3
             preparedStatement.setString(4, produto.getImage()); //4
-            preparedStatement.setString(5, produto.getDescritivo());//5
+            preparedStatement.setString(2, produto.getDescritivo());//5
 
 
 
@@ -69,7 +69,7 @@ public class ProdutoDao {
 
             }
 
-            System.out.println("success in select * produtos");
+            System.out.println("success in select * produtoss");
 
             connection.close();
 

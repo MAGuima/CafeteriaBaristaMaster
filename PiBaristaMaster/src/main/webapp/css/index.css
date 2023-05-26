@@ -1,17 +1,22 @@
 /* CONFIGURAÇÕES GERAIS INDEX E SITE */
-
+/* Atualizacoes em 20/05/2023 */
 * {
     /*border: solid; border-width: 1px; border-color: red;*/
     font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
-    font-style: normal;
+    font-style: normal;+
     font-weight: 400;
     box-sizing: 0px;
     margin: 0;
 }
 
-body {
+html {
     display: flex;
     flex-direction: column;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+body {
     color: black;
     background: linear-gradient(to bottom, #B6BCBD 40%, grey 100%);
 }
@@ -67,83 +72,65 @@ p {
     margin: 0 auto;
 }
 
-.menuSuperior {
-    max-width: 1024px;
+.containerImgPrincipal {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow: hidden;
-    position: fixed;
-    margin-top: 10px;
-    width: 100%;
-    filter: drop-shadow(10px 10px 3px rgba( 0 0 0 / 50%));
-}
-
-.menuSuperior div:hover {
-    background-color: rgba(28, 116, 98, 1);
-    box-shadow: inset 3px 2px 8px white;
-    transition: 0.3s;
-}
-
-.menuSuperior div {
-    background-color: rgba(237, 237, 237, 1);
-    border-radius: 5px;
-    margin: 10px;
-    padding: 5px;
-}
-
-a:hover {
-    color: white;
-    transition: 1s;
-}
-
-.logotipo {
-    align-self: center;
-    padding: 20px;
-    width: 250px;
-    height: 250px;
-    min-width: 150px;
-    margin: 0px;
-}
-
-.bule {
-    position: absolute;
-    width: 220px;
-    height: 258px;
-    min-width: 100px;
-    margin: 0 auto;
-}
-
-.xicara1 {
-    display: flex;
-    justify-content: left;
-    align-items: flex-end;
-    position: absolute;
-    padding: 0px 50px 0px 0px;
-
-    max-width: 172px;
-    max-height: 190px;
-    min-width: 100px;
+    flex-direction: column;
     max-width: 1024px;
     width: 1024px;
     max-height: 768px;
     height: 768px;
+    min-width: 400px;
+    margin: 0 auto;
+}
+
+.imgPrincipal1 {
+    display: flex;
+    justify-content: space-around;
+    height: 50%;
+}
+
+.imgPrincipal2 {
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+}
+
+.logotipo {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    min-width: 150px;
+    align-self: center;
+}
+
+.bule {
+    align-self: flex-end;
+    width: 100vw;
+    height: 100hw;
+    max-width: 220px;
+    padding: 10px;
+}
+
+.xicara1 {
+    align-self: center;
+    width: 172px;
+    height: 190px;
 }
 
 .moedor {
     align-self: flex-end;
-    justify-content: flex-end;
-    position: absolute;
-    max-width: 317px;
-    max-height: 302px;
-    min-width: 100px;
+    width: 100vw;
+    height: 100hw;
+    max-width: 420px;
+    padding: 20px 5px 0px 0px;
 }
 
 .arabica {
-    position: absolute;
-    max-width: 400px;
-    max-height: 400px;
-    min-width: 100px;
+    width: 100vw;
+    height: 100hw;
+    max-width: 260px;
+    align-self: center;
+    padding: 0px 10px 30px 80px;
 }
 
 /* CONFIGURAÇÕES TELA QUEM SOMOS */
@@ -215,7 +202,6 @@ a:hover {
 .containerEventos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     max-width: 1024px;
     max-height: 768px;
     min-width: 400px;
@@ -224,26 +210,23 @@ a:hover {
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
+    justify-content: center;
     background-color: #EDEDED;
 }
 
 .containerEventos2 {
-    width: 1024px;
+    width: 100%;
     max-width: 1024px;
-    height: 508px;
+    height: auto;
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-
-.contImgEventos {
-    flex-grow: 1;
-    width: 50%;
-    padding: 0px;
+    align-items: stretch;
 }
 
 .imgEventos {
-    width: 100%;
+    max-width: 480px;
+    max-height:480px;
+    width: 100vw;
+    height: 100vh;
 }
 
 .cxt1_eventos {
@@ -255,24 +238,22 @@ a:hover {
 
 .cxt2_eventos {
     background-color: white;
-    flex-grow: 1;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    padding: 0px;
+    margin: 0 auto;
 }
 
 .containerEventos p {
     color: black;
-    padding: 40px 40px 10px 40px;
     font-size: 14px;
     line-height: 30px;
     text-align: justify;
+    height: auto;
  }
 
 /* CONFIGURAÇÕES TELA CURSOS */
 
 .containerCursos {
-    border: solid; border-width: 2px; border-color: purple;
     display: flex;
     flex-wrap: wrap;
     max-width: 1024px;
@@ -293,28 +274,25 @@ a:hover {
 }
 
 .contImgCursos {
-    border: solid; border-width: 2px; border-color: purple;
     background: #F5F5F5;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    justify-content: space-between;
     width: 1024px;
     min-width: 400px;
 }
 
 .imgIcon {
-    border: solid; border-width: 2px; border-color: blue;
     order: 0;
+    align-self: center;
 }
 
 .imgEspresso {
-    border: solid; border-width: 2px; border-color: yellow;
-    min-height: auto;
+    align-self: flex-end;
     order: 1;
 }
 
 .imgBarista {
-    border: solid; border-width: 2px; border-color: red;
     min-height: auto;
     order: 2;
 }
@@ -382,22 +360,4 @@ a:hover {
     flex: 1 1 10%;
     margin: 10px 10px 0px 10px;
     border-radius: 20px 20px 0px 0px;
-}
-
-/* CONFIGURAÇÕES TELA CONTATO */
-
-.containerContato {
-    color: black;
-    background-color: #EDEDED;
-    max-width: 1024px;
-    height: 300px;
-    background-color: ;
-    margin: 0 auto;
-    justify-content: center;
-    text-align: center;
-    padding-button: 50px;
-}
-
-.containerContato h2 {
-    padding: 0px;
 }

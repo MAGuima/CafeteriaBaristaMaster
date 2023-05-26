@@ -1,40 +1,29 @@
-.menuSuperior{
-    max-width: 1920px;
+.menuSuperior {
+    max-width: 1024px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
     position: fixed;
-    margin-top: 40px;
+    margin-top: 10px;
     width: 100%;
-    filter: drop-shadow(12px 12px 5px rgba( 0 0 0 / 60%));
+    filter: drop-shadow(10px 10px 3px rgba( 0 0 0 / 50%));
 }
 
-.menuSuperior div:hover{
+.menuSuperior div:hover {
     background-color: rgba(28, 116, 98, 1);
     box-shadow: inset 3px 2px 8px white;
     transition: 0.3s;
 }
 
-.menuSuperior div{
+.menuSuperior div {
     background-color: rgba(237, 237, 237, 1);
     border-radius: 5px;
-    margin: 5px;
+    margin: 3px;
     padding: 5px;
 }
 
-a:hover{
+a:hover {
     color: white;
     transition: 1s;
 }
-
-a {
-    font-size: 14px;
-    color: black;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    padding: 14px 15px;
-}
-

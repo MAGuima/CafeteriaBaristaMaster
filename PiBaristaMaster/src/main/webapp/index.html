@@ -2,34 +2,40 @@
 <html lang="pt" xmlns="http://www.w3.org/1999/html">
 
 <head>
-    <link href="css/index.css" rel="stylesheet"/>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="./img/img_icon/favicon.png" type="image/x-icon">
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/rodape.css" rel="stylesheet" />
+    <link href="css/menuSuperior.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="./img/img_icon/favicon.png" type="image/x-icon" />
     <title>Barista Master</title>
 </head>
 
 <body>
-<!--atualização 20/05/2023-->
+<!--atualizado 20/05/2023-->
 <section class="containerPrincipal">
     <nav class="menuSuperior">
-        <div><a href="https://baristamaster.com.br/">Home</a></div>
-        <div><a href="https://baristamaster.com.br/quemsomos">Quem somos</a></div>
-        <div><a href="https://baristamaster.com.br/eventos">Eventos</a></div>
+        <div><a href="index.html">Home</a></div>
+        <div><a href="quemSomos.html">Quem somos</a></div>
+        <div><a href="eventos.html">Eventos</a></div>
         <div><a href="menu.jsp">Menu</a></div>
-        <div><a href="https://baristamaster.com.br/cursos">Cursos</a></div>
-        <div><a href="https://baristamaster.com.br/contato">Contato</a></div>
+        <div><a href="cursos.html">Cursos</a></div>
+        <div><a href="#rodape">Contato</a></div>
     </nav>
     <img class="logotipo" src="img/Logotipo.png" alt="logotipo da Barista Master"/>
-    <figure class="xicara1">
-        <img  src="img/xicara1.png" />
+    <figure class="containerImgPrincipal">
+        <div class="imgPrincipal1">
+            <img class="bule" src="img/bule.png"/>
+            <img class="arabica" src="img/arabica.png"/>
+        </div>
+        <div class="imgPrincipal2">
+            <img class="xicara1" src="img/xicara1.png"/>
+            <img class="moedor" src="img/moedor.png"/>
+        </div>
     </figure>
-
-
-    <img class="moedor" src="img/moedor.png" />
-    <img class="bule" src="img/bule.png" />
-    <img class="arabica" src="img/arabica.png" />
 </section>
-
+<!--Quem somos atualizado em 20/05/2023-->
 <section class="containerQuemSomos">
     <div class="cxtexto">
         <div class="cxt1">
@@ -55,23 +61,19 @@
         </div>
     </div>
     <figure class="contImgLoja">
-
-        <img src="img/tela2_img1.png" height="465" width="465"  alt="mesas, parede revestida de madeira e decoração com plantas"/>
+        <img src="img/tela2_img1.png" alt="mesas, parede revestida de madeira e decoração com plantas"/>
         <img src="img/tela2_img2.png" alt="foto da entrada da loja e floreira"/>
         <img src="img/tela2_img3.png" alt="foto da bancada alta com as banquetas pretas"/>
     </figure>
 </section>
-
+<!--Eventos atualizado em 20/05/2023-->
 <section class="containerEventos">
     <div class="cxt1_eventos">
         <h1>Eventos</h1>
         <h2>Diversas opções de cafés e comidinhas para você harmonizar como quiser</h2>
     </div>
     <div class="containerEventos2">
-        <figure class="contImgEventos">
-            <img class="imgEventos" src="img/tela3_img1.png"
-                 alt="Barista preparando um café na máquina de espresso"/>
-        </figure>
+        <img class="imgEventos" src="img/tela3_img1.png" alt="Barista preparando um café na máquina de espresso"/>
         <div class="cxt2_eventos">
             <p>
                 <br>Os intervalos das reuniões, onde o objetivo não é apenas comer e sim que os participantes possam
@@ -85,18 +87,16 @@
         </div>
     </div>
 </section>
-
+<!--Cursos atualizado em 20/05/2023-->
 <section class="containerCursos">
     <div class="contTxtCursos">
         <h1>Curso de Barista</h1>
         <h2>Exclusivo para você, apaixonado por café ou está iniciando nessa área</h2>
     </div>
     <section class="contImgCursos">
-        <figure>
-            <img class="imgIcon" src="img/tela4_img3.png" height="133" width="220"/>
-            <img class="imgEspresso" src="img/tela4_img1.png" height="208" width="208"/>
-            <img class="imgBarista" src="img/tela4_img2.png" height="500" width="434"/>
-        </figure>
+        <img class="imgIcon" src="img/tela4_img3.png" height="133" width="220"/>
+        <img class="imgEspresso" src="img/tela4_img1.png" height="208" width="208"/>
+        <img class="imgBarista" src="img/tela4_img2.png" height="500" width="434"/>
     </section>
 </section>
 
@@ -126,13 +126,28 @@
     </section>
 </section>
 </body>
-
 <footer>
-    <div class="containerContato">
-        <h1>Contato</h1>
-        <h2>TEL (11) 4172.6558</h2>
-        <h2>contato@baristamaster.com.br</h2>
-        <h2>Rua: Amador Bueno nº 757 - Santo Amaro/SP</h2>
-    </div>
+    <section class="footer-container" >
+        <div>
+            <img class="logoHorizontal" src="img/Logotipo_horizontal.png" alt="Logo">
+        </div>
+        <div>
+            <div class="address">
+                <h2 id="rodape">Tel/Whatsapp: (11) 4172.6558</h2>
+                contato@baristamaster.com.br<br>
+                Rua: Amador Bueno nº 757 - Santo Amaro<br>
+                São Paulo/SP, CEP: 0452-005
+            </div>
+            <div class="contact-form">
+                <input class="email-input" type="text" placeholder="Digite sua mensagem">
+                <button class="submit-btn" type="submit">Enviar</button>
+            </div>
+        </div>
+        <div class="social-links">
+            <a class="social-link" href="https://www.instagram.com/baristamasteroficial/">Instagram</a>
+            <a class="social-link" href="https://api.whatsapp.com/">WhatsApp</a>
+            <a class="social-link" href="http://facebook.com/baristamaster">Facebook</a>
+        </div>
+    </section>
 </footer>
 </html>

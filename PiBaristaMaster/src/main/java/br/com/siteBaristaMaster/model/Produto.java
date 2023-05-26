@@ -23,12 +23,9 @@ public class Produto {
     }
 
 
-
     public String getCategoriaProduto() {
         return categoriaProduto;
     }
-
-
 
 
     public String getDescritivo() {
@@ -36,12 +33,9 @@ public class Produto {
     }
 
 
-
-
     public double getPrecoVenda() {
         return precoVenda;
     }
-
 
 
     public String getImage() {
@@ -49,14 +43,9 @@ public class Produto {
     }
 
 
-
-
-
     public String getNomeProduto() {
         return nomeProduto;
     }
-
-
 
 
 }

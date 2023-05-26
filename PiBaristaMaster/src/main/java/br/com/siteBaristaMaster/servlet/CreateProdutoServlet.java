@@ -36,17 +36,17 @@ public class CreateProdutoServlet extends HttpServlet {
         double preco_venda = Double.parseDouble(parameters.get("preco_venda"));//3
         String image = parameters.get("image");// 4 - image
         String categoria_produto = parameters.get("categoria_produto");//5
-        Produto produto = new Produto(codigo_produto,nomeProduto,descritivo,preco_venda,image,categoria_produto);
+        Produto produto = new Produto(codigo_produto, nomeProduto, descritivo, preco_venda, image, categoria_produto);
 
         ProdutoDao produtoDao = new ProdutoDao();
 
-        if(codigo_produto.isBlank()){
+        if (codigo_produto.isBlank()) {
             produtoDao.createProduto(produto);
         } else {
             produtoDao.updateProduto(produto);
         }
 
-        resp.sendRedirect("/find-all-produtos");
+        resp.sendRedirect("/menu");
 
     }
 
