@@ -1,9 +1,65 @@
-.ContainerCursos {
-    background-image: url(../img/tela_cursos.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
+* {
+    /*border: solid; border-width: 1px; border-color: red;*/
+    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    font-style: normal;+
+    font-weight: 400;
+    box-sizing: 0px;
+    margin: 0;
+}
+
+.telaLogin {
+    /*border: solid; border-width: 1px; border-color: grey;*/
+    display: flex;
+    flex-direction: row;
     width: 1024px;
-    height: 768px;
+    max-height: 768px;
     justify-content: center;
     margin: 0 auto;
 }
+
+html {
+    display: flex;
+    flex-direction: row;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.imgLogin1{
+    width: 512px;
+    height: 768px;
+}
+
+.login1{
+    display: flex;
+    width: 512px;
+    align-items: center;
+    justify-content: center;
+}
+
+.login2 {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    width: 512px;
+    align-items: center;
+    justify-content: center;
+
+.cxTextoLogin {
+   width: 300px;
+   padding: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    align-items: center;
+    justify-content: center;
+}
+button:hover {
+    background-color: rgba(28, 116, 98, 1);
+    box-shadow: inset 2px 2px 2px white;
+}
+.containerButton{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+

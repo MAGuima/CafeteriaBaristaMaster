@@ -25,7 +25,7 @@
     </nav>
 <div class="tituloMenu">
     <img src="img/img_icon/icon_coffee1.svg" height="200" width="200"/>
-    <h1>CAFÉS</h1>
+    <h1 id="cafe">CAFÉS</h1>
 </div>
 <section class="flexMenu">
 
@@ -46,7 +46,7 @@
 </section>
 <div class="tituloMenu">
     <img src="img/img_icon/icon_bolo1.svg" height="200" width="200"/>
-    <h1>BOLOS ARTESANAIS</h1>
+    <h1 id="bolo">BOLOS ARTESANAIS</h1>
 </div>
 <section class="flexMenu">
 <c:forEach var="produto" items="${produtos}">
@@ -64,7 +64,7 @@
 </section>
 <div class="tituloMenu">
     <img src="img/img_icon/icon_cake1.svg" height="200" width="200"/>
-    <h1>SOBREMESAS</h1>
+    <h1 id="sobremesa">SOBREMESAS</h1>
 </div>
 <section class="flexMenu">
 <c:forEach var="produto" items="${produtos}">
@@ -82,7 +82,7 @@
 </section>
 <div class="tituloMenu">
     <img src="img/img_icon/icon_lanche1.svg" height="200" width="200"/>
-    <h1>LANCHES</h1>
+    <h1 id="lanche">LANCHES</h1>
 </div>
 <section class="flexMenu">
 <c:forEach var="produto" items="${produtos}">

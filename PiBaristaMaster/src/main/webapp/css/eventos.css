@@ -52,11 +52,64 @@ p {
     padding: 80px 40px 0px 40px;
 }
 
-.containerEventosPrincipal {
+.containerCursosBaristaPrincipal {
     min-width: 400px;
     height: 100vh;
-    background-image: url(../img/Background_Cimento.jpg);
+    background-image: url(../img/evento1.png);
     background-repeat: no-repeat;
     justify-content: center;
     align-content: flex-start;
+}
+
+.containerCursosBaristaPrincipal h1, h2 {
+    color: white;
+    text-shadow: 1px 1px 3px rgba( 0 0 0 / 80%);
+}
+
+.containerLogoCursoBarista img {
+    width: 150px;
+    height: 150px;
+    min-width: 100px;
+    margin: 40px 20px 40px 40px;
+}
+
+.containerCursoBaristaTitulo {
+    height: auto;
+    min-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.containerTitulo {
+    background-color: #50897D;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.conteinerDescritivoCurso h1 {
+    color: black;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 30px 50px 5px 30px;
+}
+
+.conteinerDescritivoCurso div {
+    padding: 20px;
+}
+
+.conteinerDescritivoCurso p {
+    color: black;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0px 50px 30px 30px;
+    text-align: justify;
+}
+
+.conteinerDescritivoCurso {
+    background-color: #EDEDED;
 }
